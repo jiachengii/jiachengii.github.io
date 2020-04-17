@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>黑客文字矩阵</title>
+    <style>
+		body{
+		margin:0;
+		overflow:hidden;
+		
+		}
+	</style>
+ </head>
+ <body>
+	<canvas id="canvas"> </canvas>	
+	<script>
+		var canvas = document.getElementById("canvas");//获取画板
+		var ctx = canvas.getContext("2d");
+		var s = window.screen;//获取屏幕对象
+		var w = s.width;//屏幕的宽度
+		var h = s.height;//屏幕的高度
+		  //赋值给画板
+		canvas.width = w;//赋值
+		canvas.height = h;//赋值
+
+		var str = "AfdwqrtyuiopmNBVCXZSDFGJJOIvV";//字符串,你懂的
+		var strlength = str.length;//字符长度
+		var fontsize = "15";//字体大小
+		var clos = Math.floor(w/fontsize);//取整数,因为有可能会计算出有小数
+		var drops =[];//创建一个数组来保存Y坐标的值
+           for(var i=0;i<clos;i++){
+			drops.push(0);
+		}
+		function drawText(){
+			ctx.fillStyle = "rgba(0,0,0,0.05)";//背景
+			ctx.fillRect(0,0,w,h);//创建矩形
+			ctx.fillStyle="green";//颜色
+			ctx.font = "600 15px 微软雅黑";
+			for(var i = 0 ;i <clos;i++){//循环执行
+			var x = i*fontsize;//计算X的坐标
+			var y = drops[i]*fontsize;//计算Y的坐标
+			var index = Math.floor(Math.random()*strlength);
+			ctx.fillText(str[index],x,y);//输出文字
+			    if(y>h &&Math.random()>0.99){//判断 如果Y坐标大于屏幕的高度那么就重新开始
+					drops[i]=0;
+				}
+			drops[i]++;
+			        
+			}
+		
+           
+
+			
+
+		}
+		
+		setInterval(drawText,30);//创建定时器
+
+
+
+	</script>
+ </body>
+</html>
