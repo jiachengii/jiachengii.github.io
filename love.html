@@ -1,0 +1,195 @@
+﻿<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>表白网站-成宝</title>
+  <style>
+ html { 
+        -webkit-filter: grayscale(100%); 
+        -moz-filter: grayscale(100%); 
+        -ms-filter: grayscale(100%); 
+        -o-filter: grayscale(100%); 
+        filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);  
+        _filter:none; 
+    } 
+  body{
+
+text-align:center;
+  margin:0;
+  background-image:url("image/2.jpg");
+  }
+  h5{margin:0;padding:0;}
+	@keyframes love{
+		form{opacity:1;transform:translateY(0);}
+		to{opacity:0;transform:translateY(600px);}
+	}
+	@keyframes love1{
+	 form{opacity:1;}
+	 to{opacity:0;}
+	}
+	@keyframes tran{
+	 form{transform:rotate(0)}
+	 to{transform:rotate(360deg)}
+
+	}
+	@keyframes topLove{
+	   form{transform:scale(0);}
+	   to{transform:scale(2)}
+	}
+	@keyframes go{
+		 0%{
+            color:green;	 
+              }
+		 10%{
+		 color:#ffff00;
+		 }
+		 20%{
+		color:#660066;
+		 }
+		 25%{
+			 color:#663399;
+		 }
+		 30%{
+			 color:#660033;
+		 }
+		 35%{
+		color:#3333ff;
+		 }
+		 40%{
+           
+		color:#33ff00;
+		 }
+		 58%{
+			 color:#663300;
+		 }
+		 100%{
+              color:blue;
+                }
+
+		}
+	#tos{
+	  animation:tran 5s infinite;
+	}
+ 
+	.love2{
+	animation:love1 9s infinite;
+	 transition:all 1s; 
+	}
+	#love
+	{
+	animation:love 6s infinite;
+	 transition:all 1s;
+	}
+	.img-left,.img-right{
+	 width:300px;
+	 height:600px;
+	}
+	.img-right{float:right;margin-top:-589px;}
+	h1{width:36vw;animation:go 6s infinite;margin:auto;}
+	#love:hover{
+	opacity:1;
+	animation-play-state:paused;
+	}
+	.say{
+	  width:100%;
+	  height:600px;
+	  background-color:#cc33cc;
+	}
+	h2{animation:go 8s infinite}
+	h2:hover{
+	 animation-play-state:paused;
+	}
+	#top-love{
+		position:absolute;
+		top:46px;
+     animation:topLove 6s infinite ;
+	}
+	.text-love{
+	 width:500px;
+	 height:265px;
+	 margin:auto;
+	}
+	a{margin:30px;}
+	.play{position:absolute;right:0;top:0;}
+  </style>
+ </head>
+ <body>
+		<h1><marquee behavior="alternate">成宝♥-爱情学院</marquee></h1>
+  <img id="love"src="image/love1.png">
+  <img id="love"src="image/love2.png" width="96"height="96">
+  <img id="love"src="image/love2.png" width="96"height="96">
+  <div class="img-left">
+    <img src="image/love5.png" id="top-love">
+	<img src="image/love5.png" id="top-love">
+ 	<img src="image/love3.png" class="love2">
+	<img src="image/love4.png"class="love2" >
+	<img src="image/love3.png"class="love2">
+	<br>
+	<img src="image/love3.png"class="love2">
+	<img src="image/love3.png"class="love2">
+  </div>
+	  <div class="img-right">
+	<img src="image/love5.png" id="top-love">
+	<img src="image/love5.png" id="top-love">
+ 	<img src="image/love3.png" class="love2">
+	<img src="image/love4.png"class="love2" >
+	<img src="image/love3.png"class="love2">
+	<br>
+	<img src="image/love3.png"class="love2">
+	<img src="image/love3.png"class="love2">
+  </div>
+  <div class="say">
+	 <h2>送给你的表白礼物</h2>
+	 <h2 id="text">送给你的表白礼物</h2>
+  	  <div class="text-love">
+		  <h3>你愿意做我女朋友吗?</h3>
+		  <a href="yes.html"onclick="yes(this)">我愿意</a>
+		  <a href="no.html" onclick="no(this)">我不愿意</a>
+	  </div>
+  	 
+  </div>
+  <div class="play">
+	<img src="image/iig.png" id="tos" onclick="play(this)">
+	<h5 id="ok">正在播放<h5>
+  </div>
+	
+ </body>
+
+ <script>
+   	var code = "其实我一直在等待,我的等待只是为了等到你的出现,你是我的这个世界,我已经等你好久了,我愿意陪你直到满头白发的这一天,我愿意,守护你生命里的精彩,我期待每一天的早上和你说声晚安,期待每一个夜晚道声晚安入梦乡,我期待一生能牵着你的手一直走下去,我愿爱你一生一世，相守到老你愿意做我女朋友吗";
+	var i = 0;
+	function typ(){
+	code.charAt(i);
+	var d = document.getElementById("text");
+	d.innerHTML += code.charAt(i);
+	i++;
+	console.log(code.charAt(i));
+	var id = setTimeout(typ,200);
+	if(i==code.length){
+	d.innerHTML = "";
+	 i = 0;
+	}
+	}
+	typ();
+	var dom = document.createElement("audio");
+	dom.src="music/loves.mp3" ;
+	dom.autoplay = "autoplay";
+	
+	function play(){
+		var ok = document.getElementById("ok");
+		ok.innerHTML = "停止播放";
+	   dom.pause();
+
+	}
+	function yes(){
+	 alert("么么哒,爱你!(*￣ω￣)♪(^∇^*)");
+	}
+	function no(){
+	   alert("呜呜~o(>﹏<)o这么忍心拒绝了");
+	}
+ </script>
+</html>
