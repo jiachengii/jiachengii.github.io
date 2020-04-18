@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>小姐姐爱你</title>
+  <style>
+@keyframes go{
+		 0%{
+            color:green;	 
+              }
+		 10%{
+		 color:#ffff00;
+		 }
+		 20%{
+		color:#660066;
+		 }
+		 25%{
+			 color:#663399;
+		 }
+		 30%{
+			 color:#660033;
+		 }
+		 35%{
+		color:#3333ff;
+		 }
+		 40%{
+           
+		color:#33ff00;
+		 }
+		 58%{
+			 color:#663300;
+		 }
+		 100%{
+              color:blue;
+                }
+		}
+#topTitle{
+animation:go 2s infinite ;//播放动画
+}
+#options{
+            width: 220px;
+            height: 38px;
+			text-align:center;
+		    margin: auto;
+       //     background: orange;
+}
+.btn{
+font-size:24px;
+background-color: #ff99ff;
+border: 2px solid #4CAF50; /* Green */
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+border-radius: 8px;//圆角
+}
+/*鼠标悬停效果 在PC端才能体现出来 好像IE浏览器不支持????我测试的ie浏览器就用不了*/
+.btn:hover{
+    background-color: #4CAF50; /* Green */
+    color: white;
+box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+#pho{
+            width: 220px;
+            height: 38px;
+			text-align:center;
+		    margin: auto;
+}
+
+  </style>
+ </head>
+ <body>
+ <h1 id="topTitle" align="center">一封迟来的信</h1>
+<h2  align="center">做我女朋友好吗???</h2>
+  <div  align="center"><img src="kk.jpg"/></div>
+ <div id="options">
+  <button onclick="yes()" type="button" class="btn" id="yes">愿意</button>
+  <button onclick="no()"type="button" class="btn" id="no">不要</button>
+  </div>
+  <div id="pho">
+  <h4>网站所有:成宝@2020</h4>
+  <h5>作者(一个18岁的计算机geek)vx:HA2765441358</h5>
+  <h5>QQ:2765441358</h5>
+<img src="yy.gif" height="100px" width="100px"  />
+  </div>
+ </body>
+ <script>
+ var count = 0;
+ var LookNo = 0;//有没有点击不要按钮
+ //第一次没有点不要按钮LookNo为0 点击了 为1 点击了三次为2
+function yes(){
+	bellBtnClick(2000) ;
+    if(LookNo == 0){
+		alert("这么主动没有点击过一次不要 真的????");
+		alert("看下去吧");
+    }else if(LookNo == 1){
+		alert("怎么不看下去了 其实还有很多内容???");
+    }else if(LookNo == 2){
+		alert("套路太深吧??突然不要按钮不见了 好玩")
+    }
+	alert("爱你宝贝么么哒!!!!");
+	alert("哈哈哈哈哈哈!套路你了 记得支持作者哦 作者会持续更新");
+}
+function no(){
+	bellBtnClick(3000);
+	if(count == 0){
+		LookNo = 1
+		count = count + 1;
+		alert("多点几次不要按钮有惊喜哦!!!");
+		alert("我喜欢你、我们交往吧!");
+	}else if(count == 1){
+		alert("说海枯石烂太远，说山盟海誓太大，我只愿能和你做一条先上的蚂蚁，一条爱情锁上的囚徒");
+		count = count + 1;
+	}else if(count == 2){
+		alert("我现在只想对你说三个字！我爱你！！");
+		count = count +1
+	}else if(count == 3){
+		alert("让我来照顾你！")
+		count = count + 1;
+	}else{
+		var bt = document.getElementById("no");
+       bt.style.display = "none";
+	   LookNo = 2;
+		alert("哼!!!再来试试吧!!");
+	}
+}
+ 	//移动端震动功能(只适合安卓)
+	    function bellBtnClick(s) {
+         if(!window.navigator.vibrate){
+			alert("你的设备不支持浏览器使用震动真的不会玩了");
+         }
+        if (navigator.vibrate) {
+            navigator.vibrate(s);//震动秒数
+        }else if (navigator.webkitVibrate) {
+            navigator.webkitVibrate(s);
+        }
+    }
+	</script>
+</html>
