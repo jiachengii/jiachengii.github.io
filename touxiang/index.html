@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="成宝">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>头像网找你最爱的头像-头像党必备</title>
+  <!--引入基础库-->
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <!-- bootstrap基础文件 -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <!-- 结束 -->
+   <!-- 图片懒加载库 -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+  <!-- 妹子框架 -->
+   <!-- <script src="https://cdn.bootcdn.net/ajax/libs/amazeui/2.7.2/css/amazeui.min.css"></script>  -->
+  <!-- 结束 -->
+  <style>
+  /*图片样式*/
+   h5{text-align:center;}
+	@media screen and (max-width: 750px) {
+        .lazy {
+        width: 100%;
+        height: 500px;
+		margin-top:20px;
+    }
+	@media screen and (min-width: 300px) {
+        .lazy {
+        width: 100%;
+        height: 300px;
+		margin-top:20px;
+    }
+	   .retop{
+	   position: absolute;
+	   position:fixed;
+	   right: 0px;
+       bottom: 0px;
+	   cursor:hand;
+	   }
+     }
+  </style>
+ </head>
+ <body>
+ <!--回到顶部按钮-->
+ <div class="retop">
+<img src="img/2.png" style="width:48px;height:97px;display:none;" id="top-btn" onclick="topk(this)"/>
+ </div>
+ <!-- 顶部移动端PC端适配菜单栏 -->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid"> 
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#example-navbar-collapse">
+            <span class="sr-only">切换导航</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">成宝个人网站</a>
+    </div>
+    <div class="collapse navbar-collapse" id="example-navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">女生头像</a></li>
+            <li class="active"><a href="#">情侣头像</a></li>
+            <li class="active"><a href="#">公式头像</a></li>
+			<li class="active"><a href="#">闺蜜头像</a></li>
+			<li class="active"><a href="#">漫画女生头像</a></li>
+			<li class="active"><a href="#">漫画男生头像</a></li>
+			<li class="active"><a href="#">小清新头像</a></li>
+			<li class="active"><a href="#">小编推荐头像</a></li>
+        </ul>
+    </div>
+    </div>
+</nav>
+ <!-- 菜单结束 -->
+<!-- 小提示 -->
+ <div id="myAlert" class="alert alert-success">
+    <a href="#" class="close" data-dismiss="alert">&times;</a>
+    <strong>提示</strong>移动设备点击右上角的按钮可以查看更多头像哦↑
+</div>
+ <div id="myAlert" class="alert alert-success">
+    <a href="#" class="close" data-dismiss="alert">&times;</a>
+    <strong>温馨提示</strong><span style="color:red;">向下滑动还有内容哦别忘了!!!!!!</span>
+</div>
+<!-- 小提示结束 -->
+
+
+  <!-- 超大屏幕哦 -->
+<div class="container">
+   <div class="jumbotron">
+        <h1>欢迎浏览我的头像网</h1>
+        <p>在这里你可以看到更多的头像</p>
+    <button type="button" class="btn btn-primary" title="提示"
+            data-container="body" data-toggle="popover" data-placement="top"
+            data-content="本站还在开发阶段,有很多头像还没有加入,有时间会加入,请尊重我的版权不要乱喷,有什么意见和建议请看温馨提示">
+                  了解更多
+    </button>
+      </p>
+   </div>
+</div>
+<!-- 超大屏幕结束 -->
+
+<!-- 面包屑提示 -->
+<!-- 面包屑导航 -->
+<ul class="breadcrumb">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">头像</a></li>
+    <li class="active">推荐头像</li>
+</ul>
+<!-- 面包屑提示结束 -->
+
+<!-- 提示表格 -->
+<table class="table table-bordered">
+  <caption>头像开放类型和开发进度</caption>
+  <thead>
+    <tr>
+      <th>头像类型</th>
+      <th>开发进度</th>
+      <th>头像来源</th>
+	  <th>备注</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>女生头像</td>
+      <td>0%</td>
+      <td>百度</td>
+	   <th></th>
+    </tr>
+    <tr>
+      <td>情侣头像</td>
+      <td>0%</td>
+      <td>百度</td>
+	  <td></td>
+    </tr>
+    <tr>
+      <td>公式头像</td>
+      <td>0%</td>
+      <td>百度</td>
+	  <td></td>
+    </tr>
+      <td>闺蜜头像</td>
+      <td>0%</td>
+      <td>百度</td>
+	  <td></td>
+    </tr>
+      <td>漫画女生头像</td>
+      <td>0%</td>
+      <td>百度</td>
+	  <td></td>
+    </tr>
+	   <td>漫画男生头像</td>
+      <td>0%</td>
+      <td>百度</td>
+	  <td></td>
+    </tr>
+      <td>小清新头像</td>
+      <td>0%</td>
+      <td>百度</td>
+	  <td></td>
+    </tr>
+  </tbody>
+</table>
+<!-- 表格结束 -->
+<h3>小编推荐首页头像</h3>
+<!-- 图片库 -->
+<div class="img-content">
+    <img class="lazy" data-original="https://img.52z.com/upload/news/image/20200421/20200421121630_33367.jpg">
+	<img class="lazy" data-original="https://img.52z.com/upload/news/image/20200421/20200421121630_60226.jpg">
+	<img class="lazy" data-original="https://img.52z.com/upload/news/image/20200421/20200421121631_67508.jpg">
+	<img class="lazy" data-original="https://img.52z.com/upload/news/image/20200421/20200421121631_74626.jpg">
+	<img class="lazy" data-original="https://img.52z.com/upload/news/image/20200421/20200421121631_49633.jpg">
+	<img class="lazy" data-original="http://www.17qq.com/img_qqtouxiang/90153529.jpeg">
+	<img class="lazy" data-original="http://www.17qq.com/img_qqtouxiang/90153378.jpeg">
+	<img class="lazy" data-original="	https://tupian.qqw21.com/article/UploadPic/2020-3/202032620134154260.jpg">
+	<img class="lazy" data-original="	http://img1.2345.com/duoteimg/zixunImg/local/2018/04/04/1522822080366.jpg">
+	<img class="lazy" data-original="	http://pic.qqtn.com/up/2018-2/15195218538323729.jpg">
+	<img class="lazy" data-original="	https://www.cqor.com/wp-content/uploads/06df572a7cfeae.jpg">
+	<img class="lazy" data-original="	https://www.cqor.com/wp-content/uploads/05f8adddf675e7.jpg">
+	<img class="lazy" data-original="	https://www.cqor.com/wp-content/uploads/0050dae0a67ed8.jpg">
+	<img class="lazy" data-original="	http://img4.imgtn.bdimg.com/it/u=370673914,3453315108&fm=26&gp=0.jpg">
+	<img class="lazy" data-original="	http://img.wxcha.com/file/201806/14/2a7646c678.jpg">
+	<img class="lazy" data-original="	http://inews.gtimg.com/newsapp_bt/0/10009524946/1000.jpg">
+	<img class="lazy" data-original="http://b-ssl.duitang.com/uploads/item/201607/05/20160705174311_yrGTe.jpeg">
+	<img class="lazy" data-original="	http://c-ssl.duitang.com/uploads/item/201603/20/20160320074720_A5JRE.jpeg">
+	<img class="lazy" data-original="	http://image.biaobaiju.com/uploads/20181017/22/1539787961-mxDRVlQKIi.jpeg">
+	<img class="lazy" data-original="	http://image.cilacila.com/uploads/20190314/12/1552538485-drHuoqCpkK.jpeg">
+	<img class="lazy" data-original="	http://img3.imgtn.bdimg.com/it/u=3212220195,1830592114&fm=26&gp=0.jpg">
+	<img class="lazy" data-original="	http://dingyue.ws.126.net/2020/0328/3b7b35cdj00q7w2cx0020d000rs00rsp.jpg">
+	<img class="lazy" data-original="	http://pics3.baidu.com/feed/a8ec8a13632762d076b36af5e7bd61fc503dc647.jpeg?token=9c3013fc781a4bebd01a908db20c8398">
+	<img class="lazy" data-original="	http://pics0.baidu.com/feed/54fbb2fb43166d22691d4205017260f19152d294.jpeg?token=c88af852099b1119932c3bf8a9d58df9">
+	<h3>送福利<span style="color:red;">萝莉头像</span></h3>
+	<img class="lazy" data-original="	http://5b0988e595225.cdn.sohucs.com/q_70,c_zoom,w_640/images/20180908/91abcd27c99e4b51aa619cc5e1a31798.jpeg">
+	<img class="lazy" data-original="	http://img2.imgtn.bdimg.com/it/u=3345078552,1504673754&fm=26&gp=0.jpg">
+	<img class="lazy" data-original="	http://02.imgmini.eastday.com/mobile/20180507/20180507235355_48693e4284c742f6f4c8d7ac87b2ac95_1.jpeg">
+	<img class="lazy" data-original="	http://5b0988e595225.cdn.sohucs.com/q_70,c_zoom,w_640/images/20190322/c54584595ec6493c8ae94a4cf02fb2df.jpeg">
+	<img class="lazy" data-original="	http://5b0988e595225.cdn.sohucs.com/q_70,c_lfill,w_300,h_200,g_faces/images/20190422/aaea715c7b484e7ab5a849d31668c122.jpg">
+	<img class="lazy" data-original="	http://5b0988e595225.cdn.sohucs.com/images/20191109/f89e6c8062544ef28f401f41b8b01a76.jpeg">
+	<img class="lazy" data-original="	http://5b0988e595225.cdn.sohucs.com/images/20200407/5dd0d9a0a381474b83b9480b133bce55.jpeg">
+	<img class="lazy" data-original="	http://5b0988e595225.cdn.sohucs.com/images/20190423/8a760c5b0a214e2d8b18739a55129bc0.jpeg">
+</div>
+<!-- 图片库结束 -->
+ </body>
+ <!-- ----------------底部面板------------------------ -->
+ <div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">温馨提示</h3>
+    </div>
+    <div class="panel-body">
+        本网站由成宝个人编写 严禁把本站源代码拿来复制擅自使用 尊重作者知识产权严禁侵犯</br>
+		本头像网所有头像来源<span style="color:red;">网络</span>如有侵犯你的请联系作者作者会及时删除</br>
+		<strong>如有问题请联系作者微信:<span style="color:red;">HA2765441358</span></strong>
+    </div>
+</div>
+<!-------------- 面板结束--------------------------- -->
+<!--跳转模板-->
+<div class="list-group">
+    <a href="#" class="list-group-item active">
+        <h4 class="list-group-item-heading">
+            网站中转
+        </h4>
+    </a>
+    <a href="https://www.baidu.com" class="list-group-item">
+        <h4 class="list-group-item-heading">
+            百度
+        </h4>
+        <p class="list-group-item-text">
+            快速到百度看看有什么
+        </p>
+    </a>
+    <a href="https://www.jd.com" class="list-group-item">
+        <h4 class="list-group-item-heading">
+           京东
+        </h4>
+        <p class="list-group-item-text">
+            女生的最爱
+        </p>
+    </a>
+    <a href="https://jx.tmall.com" class="list-group-item">
+        <h4 class="list-group-item-heading">
+           天猫
+        </h4>
+        <p class="list-group-item-text">
+            也是女生的最爱
+        </p>
+    </a>
+    <a href="https://www.taobao.com" class="list-group-item">
+        <h4 class="list-group-item-heading">
+           淘宝
+        </h4>
+        <p class="list-group-item-text">
+          淘一淘钱包
+        </p>
+    </a>
+
+</div>
+<!-- 面板结束 -->
+<hr>
+<h5>到底了:(</h5>
+<h5>成宝</h5>
+<h5>@2020 版权所有</h5>
+ <script>
+$(function (){
+	//了解更多的悬浮提示
+    $("[data-toggle='popover']").popover();
+	//初始化图片懒加载
+	 $(".lazy").lazyload({
+            //用图片提前占位
+            placeholder : "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1588470372549&di=85978ea10774bebb0d3145c4ca557755&imgtype=0&src=http%3A%2F%2Finews.gtimg.com%2Fnewsapp_match%2F0%2F10559394992%2F0.jpg", 
+            // 载入使用何种效果
+            effect: "fadeIn", 
+        });
+});
+ //精美弹框(完美)
+Toast('欢迎光临我的头像网',2000);
+function Toast(msg,duration){
+      duration=isNaN(duration)?3000:duration;
+      var m = document.createElement('div');
+      m.innerHTML = msg;
+      m.style.cssText="max-width:60%;min-width: 150px;padding:0 14px;height: 40px;color: rgb(255, 255, 255);line-height: 40px;text-align: center;border-radius: 4px;position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 999999;background: rgba(0, 0, 0,.7);font-size: 16px;";
+      document.body.appendChild(m);
+      setTimeout(function() {
+        var d = 0.5;
+        m.style.webkitTransition = '-webkit-transform ' + d + 's ease-in, opacity ' + d + 's ease-in';
+        m.style.opacity = '0';
+        setTimeout(function() { document.body.removeChild(m) }, d * 1000);
+      }, duration);
+    }
+	 //监听滚动
+ window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("top-btn").style.display = "block";
+    } else {
+        document.getElementById("top-btn").style.display = "none";
+    }
+}
+//返回顶部操作
+ function topk() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+	Toast('已回到顶部',2000);
+}
+</script>
+</html>
