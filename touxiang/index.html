@@ -16,32 +16,13 @@
    <!-- 结束 -->
    <!-- 图片懒加载库 -->
   <script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+  <script src="js/publics.js"></script><!-- 公共js代码 -->
+  <link href="css/publiccss.css" rel="stylesheet"><!-- 公共css代码 -->
   <!-- 妹子框架 -->
    <!-- <script src="https://cdn.bootcdn.net/ajax/libs/amazeui/2.7.2/css/amazeui.min.css"></script>  -->
   <!-- 结束 -->
   <style>
-  /*图片样式*/
-   h5{text-align:center;}
-	@media screen and (max-width: 750px) {
-        .lazy {
-        width: 100%;
-        height: 500px;
-		margin-top:20px;
-    }
-	@media screen and (min-width: 300px) {
-        .lazy {
-        width: 100%;
-        height: 300px;
-		margin-top:20px;
-    }
-	   .retop{
-	   position: absolute;
-	   position:fixed;
-	   right: 0px;
-       bottom: 0px;
-	   cursor:hand;
-	   }
-     }
+
   </style>
  </head>
  <body>
@@ -64,7 +45,7 @@
     </div>
     <div class="collapse navbar-collapse" id="example-navbar-collapse">
         <ul class="nav navbar-nav">
-            <li class="active"><a href="#">女生头像</a></li>
+            <li class="active"><a href="girlx.html">女生头像</a></li>
             <li class="active"><a href="#">情侣头像</a></li>
             <li class="active"><a href="#">公式头像</a></li>
 			<li class="active"><a href="#">闺蜜头像</a></li>
@@ -113,6 +94,16 @@
 </ul>
 <!-- 面包屑提示结束 -->
 
+<!-- 更新状态 -->
+ <div id="myAlert" class="alert alert-success">
+    <a href="#" class="close" data-dismiss="alert">&times;</a>
+    <strong>更新:</strong></br>
+	2020-05-10更新了女生头像需要可以到菜单栏打开查看
+	</br>
+	等待一下还有<span style="color:red;">更新</span>
+</div>
+<!-- 更新状态结束 -->
+
 <!-- 提示表格 -->
 <table class="table table-bordered">
   <caption>头像开放类型和开发进度</caption>
@@ -127,9 +118,9 @@
   <tbody>
     <tr>
       <td>女生头像</td>
-      <td>0%</td>
+      <td>100%</td>
       <td>百度</td>
-	   <th></th>
+	   <th>完成</th>
     </tr>
     <tr>
       <td>情侣头像</td>
@@ -168,42 +159,44 @@
 <!-- 表格结束 -->
 <h3>小编推荐首页头像</h3>
 <!-- 图片库 -->
-<div class="img-content">
-    <img class="lazy" data-original="https://img.52z.com/upload/news/image/20200421/20200421121630_33367.jpg">
-	<img class="lazy" data-original="https://img.52z.com/upload/news/image/20200421/20200421121630_60226.jpg">
-	<img class="lazy" data-original="https://img.52z.com/upload/news/image/20200421/20200421121631_67508.jpg">
-	<img class="lazy" data-original="https://img.52z.com/upload/news/image/20200421/20200421121631_74626.jpg">
-	<img class="lazy" data-original="https://img.52z.com/upload/news/image/20200421/20200421121631_49633.jpg">
-	<img class="lazy" data-original="http://www.17qq.com/img_qqtouxiang/90153529.jpeg">
-	<img class="lazy" data-original="http://www.17qq.com/img_qqtouxiang/90153378.jpeg">
-	<img class="lazy" data-original="	https://tupian.qqw21.com/article/UploadPic/2020-3/202032620134154260.jpg">
-	<img class="lazy" data-original="	http://img1.2345.com/duoteimg/zixunImg/local/2018/04/04/1522822080366.jpg">
-	<img class="lazy" data-original="	http://pic.qqtn.com/up/2018-2/15195218538323729.jpg">
-	<img class="lazy" data-original="	https://www.cqor.com/wp-content/uploads/06df572a7cfeae.jpg">
-	<img class="lazy" data-original="	https://www.cqor.com/wp-content/uploads/05f8adddf675e7.jpg">
-	<img class="lazy" data-original="	https://www.cqor.com/wp-content/uploads/0050dae0a67ed8.jpg">
-	<img class="lazy" data-original="	http://img4.imgtn.bdimg.com/it/u=370673914,3453315108&fm=26&gp=0.jpg">
-	<img class="lazy" data-original="	http://img.wxcha.com/file/201806/14/2a7646c678.jpg">
-	<img class="lazy" data-original="	http://inews.gtimg.com/newsapp_bt/0/10009524946/1000.jpg">
-	<img class="lazy" data-original="http://b-ssl.duitang.com/uploads/item/201607/05/20160705174311_yrGTe.jpeg">
-	<img class="lazy" data-original="	http://c-ssl.duitang.com/uploads/item/201603/20/20160320074720_A5JRE.jpeg">
-	<img class="lazy" data-original="	http://image.biaobaiju.com/uploads/20181017/22/1539787961-mxDRVlQKIi.jpeg">
-	<img class="lazy" data-original="	http://image.cilacila.com/uploads/20190314/12/1552538485-drHuoqCpkK.jpeg">
-	<img class="lazy" data-original="	http://img3.imgtn.bdimg.com/it/u=3212220195,1830592114&fm=26&gp=0.jpg">
-	<img class="lazy" data-original="	http://dingyue.ws.126.net/2020/0328/3b7b35cdj00q7w2cx0020d000rs00rsp.jpg">
-	<img class="lazy" data-original="	http://pics3.baidu.com/feed/a8ec8a13632762d076b36af5e7bd61fc503dc647.jpeg?token=9c3013fc781a4bebd01a908db20c8398">
-	<img class="lazy" data-original="	http://pics0.baidu.com/feed/54fbb2fb43166d22691d4205017260f19152d294.jpeg?token=c88af852099b1119932c3bf8a9d58df9">
-	<h3>送福利<span style="color:red;">萝莉头像</span></h3>
-	<img class="lazy" data-original="	http://5b0988e595225.cdn.sohucs.com/q_70,c_zoom,w_640/images/20180908/91abcd27c99e4b51aa619cc5e1a31798.jpeg">
-	<img class="lazy" data-original="	http://img2.imgtn.bdimg.com/it/u=3345078552,1504673754&fm=26&gp=0.jpg">
-	<img class="lazy" data-original="	http://02.imgmini.eastday.com/mobile/20180507/20180507235355_48693e4284c742f6f4c8d7ac87b2ac95_1.jpeg">
-	<img class="lazy" data-original="	http://5b0988e595225.cdn.sohucs.com/q_70,c_zoom,w_640/images/20190322/c54584595ec6493c8ae94a4cf02fb2df.jpeg">
-	<img class="lazy" data-original="	http://5b0988e595225.cdn.sohucs.com/q_70,c_lfill,w_300,h_200,g_faces/images/20190422/aaea715c7b484e7ab5a849d31668c122.jpg">
-	<img class="lazy" data-original="	http://5b0988e595225.cdn.sohucs.com/images/20191109/f89e6c8062544ef28f401f41b8b01a76.jpeg">
-	<img class="lazy" data-original="	http://5b0988e595225.cdn.sohucs.com/images/20200407/5dd0d9a0a381474b83b9480b133bce55.jpeg">
-	<img class="lazy" data-original="	http://5b0988e595225.cdn.sohucs.com/images/20190423/8a760c5b0a214e2d8b18739a55129bc0.jpeg">
-</div>
-<!-- 图片库结束 -->
+<div class="container">
+						<div class="img-content">
+							<img class="lazy" data-original="https://img.52z.com/upload/news/image/20200421/20200421121630_33367.jpg">
+							<img class="lazy" data-original="https://img.52z.com/upload/news/image/20200421/20200421121630_60226.jpg">
+							<img class="lazy" data-original="https://img.52z.com/upload/news/image/20200421/20200421121631_67508.jpg">
+							<img class="lazy" data-original="https://img.52z.com/upload/news/image/20200421/20200421121631_74626.jpg">
+							<img class="lazy" data-original="https://img.52z.com/upload/news/image/20200421/20200421121631_49633.jpg">
+							<img class="lazy" data-original="http://www.17qq.com/img_qqtouxiang/90153529.jpeg">
+							<img class="lazy" data-original="http://www.17qq.com/img_qqtouxiang/90153378.jpeg">
+							<img class="lazy" data-original="	https://tupian.qqw21.com/article/UploadPic/2020-3/202032620134154260.jpg">
+							<img class="lazy" data-original="	http://img1.2345.com/duoteimg/zixunImg/local/2018/04/04/1522822080366.jpg">
+							<img class="lazy" data-original="	http://pic.qqtn.com/up/2018-2/15195218538323729.jpg">
+							<img class="lazy" data-original="	https://www.cqor.com/wp-content/uploads/06df572a7cfeae.jpg">
+							<img class="lazy" data-original="	https://www.cqor.com/wp-content/uploads/05f8adddf675e7.jpg">
+							<img class="lazy" data-original="	https://www.cqor.com/wp-content/uploads/0050dae0a67ed8.jpg">
+							<img class="lazy" data-original="	http://img4.imgtn.bdimg.com/it/u=370673914,3453315108&fm=26&gp=0.jpg">
+							<img class="lazy" data-original="	http://img.wxcha.com/file/201806/14/2a7646c678.jpg">
+							<img class="lazy" data-original="	http://inews.gtimg.com/newsapp_bt/0/10009524946/1000.jpg">
+							<img class="lazy" data-original="http://b-ssl.duitang.com/uploads/item/201607/05/20160705174311_yrGTe.jpeg">
+							<img class="lazy" data-original="	http://c-ssl.duitang.com/uploads/item/201603/20/20160320074720_A5JRE.jpeg">
+							<img class="lazy" data-original="	http://image.biaobaiju.com/uploads/20181017/22/1539787961-mxDRVlQKIi.jpeg">
+							<img class="lazy" data-original="	http://image.cilacila.com/uploads/20190314/12/1552538485-drHuoqCpkK.jpeg">
+							<img class="lazy" data-original="	http://img3.imgtn.bdimg.com/it/u=3212220195,1830592114&fm=26&gp=0.jpg">
+							<img class="lazy" data-original="	http://dingyue.ws.126.net/2020/0328/3b7b35cdj00q7w2cx0020d000rs00rsp.jpg">
+							<img class="lazy" data-original="	http://pics3.baidu.com/feed/a8ec8a13632762d076b36af5e7bd61fc503dc647.jpeg?token=9c3013fc781a4bebd01a908db20c8398">
+							<img class="lazy" data-original="	http://pics0.baidu.com/feed/54fbb2fb43166d22691d4205017260f19152d294.jpeg?token=c88af852099b1119932c3bf8a9d58df9">
+							<h3>送福利<span style="color:red;">萝莉头像</span></h3>
+							<img class="lazy" data-original="	http://5b0988e595225.cdn.sohucs.com/q_70,c_zoom,w_640/images/20180908/91abcd27c99e4b51aa619cc5e1a31798.jpeg">
+							<img class="lazy" data-original="	http://img2.imgtn.bdimg.com/it/u=3345078552,1504673754&fm=26&gp=0.jpg">
+							<img class="lazy" data-original="	http://02.imgmini.eastday.com/mobile/20180507/20180507235355_48693e4284c742f6f4c8d7ac87b2ac95_1.jpeg">
+							<img class="lazy" data-original="	http://5b0988e595225.cdn.sohucs.com/q_70,c_zoom,w_640/images/20190322/c54584595ec6493c8ae94a4cf02fb2df.jpeg">
+							<img class="lazy" data-original="	http://5b0988e595225.cdn.sohucs.com/q_70,c_lfill,w_300,h_200,g_faces/images/20190422/aaea715c7b484e7ab5a849d31668c122.jpg">
+							<img class="lazy" data-original="	http://5b0988e595225.cdn.sohucs.com/images/20191109/f89e6c8062544ef28f401f41b8b01a76.jpeg">
+							<img class="lazy" data-original="	http://5b0988e595225.cdn.sohucs.com/images/20200407/5dd0d9a0a381474b83b9480b133bce55.jpeg">
+							<img class="lazy" data-original="	http://5b0988e595225.cdn.sohucs.com/images/20190423/8a760c5b0a214e2d8b18739a55129bc0.jpeg">
+						</div>
+	</div>
+						<!-- 图片库结束 -->
  </body>
  <!-- ----------------底部面板------------------------ -->
  <div class="panel panel-success">
@@ -264,46 +257,7 @@
 <h5>成宝</h5>
 <h5>@2020 版权所有</h5>
  <script>
-$(function (){
-	//了解更多的悬浮提示
-    $("[data-toggle='popover']").popover();
-	//初始化图片懒加载
-	 $(".lazy").lazyload({
-            //用图片提前占位
-            placeholder : "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1588470372549&di=85978ea10774bebb0d3145c4ca557755&imgtype=0&src=http%3A%2F%2Finews.gtimg.com%2Fnewsapp_match%2F0%2F10559394992%2F0.jpg", 
-            // 载入使用何种效果
-            effect: "fadeIn", 
-        });
-});
  //精美弹框(完美)
 Toast('欢迎光临我的头像网',2000);
-function Toast(msg,duration){
-      duration=isNaN(duration)?3000:duration;
-      var m = document.createElement('div');
-      m.innerHTML = msg;
-      m.style.cssText="max-width:60%;min-width: 150px;padding:0 14px;height: 40px;color: rgb(255, 255, 255);line-height: 40px;text-align: center;border-radius: 4px;position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 999999;background: rgba(0, 0, 0,.7);font-size: 16px;";
-      document.body.appendChild(m);
-      setTimeout(function() {
-        var d = 0.5;
-        m.style.webkitTransition = '-webkit-transform ' + d + 's ease-in, opacity ' + d + 's ease-in';
-        m.style.opacity = '0';
-        setTimeout(function() { document.body.removeChild(m) }, d * 1000);
-      }, duration);
-    }
-	 //监听滚动
- window.onscroll = function() {scrollFunction()};
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("top-btn").style.display = "block";
-    } else {
-        document.getElementById("top-btn").style.display = "none";
-    }
-}
-//返回顶部操作
- function topk() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-	Toast('已回到顶部',2000);
-}
 </script>
 </html>
