@@ -1,0 +1,15 @@
+﻿/*background-attachment:fixed;背景图片固定不随滚动条滚动*/
+  h1{background-color:transparent;}
+  body{background-color:#f4f4f4;}
+    .de-style{
+       background-color:#C7EDCC;
+	}
+	.dark-style{
+	       background-color:#262326;
+		   color:#d2d0d0;
+	}
+  .lazy {
+        width: 100%;
+        height: 300px;
+		margin-top:20px;
+    }
