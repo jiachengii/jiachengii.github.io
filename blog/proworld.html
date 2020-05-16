@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>成宝博文-带你进入编程世界</title>
+    <!--引入基础库-->
+    <meta name='viewport' content='width=device-width,minimum-scale=1.0 maximum-scale=1.0 user-scalable=no' /> 
+ <!-- bootstrap基础文件 -->
+<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <!-- 结束 -->
+   <!-- 图片懒加载库 -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+  <script src="js/publicjs.js"></script><!-- 公共js代码 -->
+  <link href="css/publiccss.css" rel="stylesheet"><!-- 公共css代码 -->
+  <!-- 妹子框架 -->
+   <!-- <script src="https://cdn.bootcdn.net/ajax/libs/amazeui/2.7.2/css/amazeui.min.css"></script>  -->
+  <!-- 结束 -->
+  <style>
+    	/*在超小屏幕下 手机 小于768px布局容器的宽度为100%*/
+	@media screen and (max-width: 767px){
+	        /*.img{width:100%;}*/
+	    }
+    /*小屏幕 平板电脑 大于等于768px 布局容器改为750px*/
+    	@media screen and (min-width: 768px){
+	      .lazy{height:500px;height:500px;} 
+	    }
+   /*中等屏幕 992px 布局容器改为970px*/
+       	@media screen and (min-width: 992px){
+	      .lazy{height:500px;height:500px;} 
+	    }
+       /*大屏幕 大于1200px 布局容器改为1170px*/
+	    @media screen and (min-width: 992px){
+	     .lazy{height:500px;height:500px}   .
+	  }
+  </style>
+ </head>
+ <body>
+        <!-- 顶部移动端PC端适配菜单栏 -->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid"> 
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#example-navbar-collapse">
+            <span class="sr-only">切换导航</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">成宝个人网站</a>
+    </div>
+    <div class="collapse navbar-collapse" id="example-navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">首页</a></li>
+        </ul>
+    </div>
+    </div>
+</nav>
+ <!-- 菜单结束 -->
+ <!-- 选择主题 -->
+<div class="style-btn">
+<h4>选择主题</h4>
+<button type="button" class="btn btn-default de-style" onclick="green()">护眼绿</button>
+<button type="button" class="btn btn-default dark-style" onclick="dark()">暗黑模式</button>
+</div>
+<!-- 结束 -->
+<!-- 面包屑导航 -->
+<ul class="breadcrumb">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">网络世界</a></li>
+    <li class="active">编程的世界</li>
+</ul>
+<!-- 面包屑提示结束 -->
+<!-- 正文 -->
+     <div class="container">
+	              <h1>带你了解编程的世界</h1>
+				  <p> 本人将带你了解编程的世界其实嘛编程真的不难所有人都可以学习只要有
+					正确的学习方法正确的学习资源完完全全可以学会</p>
+					<h2>首先让我们来认识一下到底什么是编程?</h2>
+					<p>编程也叫编写程序是让计算机根据我们的意图来完成我们需要让计算机所
+					完成的事情(有点绕没关系慢慢理解)</p>
+					<img class="lazy" data-original="http://image.retui8.com/?url=https://mmbiz.qpic.cn/mmbiz_jpg/hJj5Cd2GCeEZLUXP77ia36DQJ4iccKrVBwT0fM4kNccABCBBuFXkibibmJeXcGIoS5zeYve9DC1ia7GiboT3cuHzfwjg/640?wx_fmt=jpeg.jpg">
+					<h2>计算机你不知道的事情</h2>
+					<p>其实计算机就是一个死板的机器 只会依赖人类 计算机的世界上都是把所
+					有数据都是看成<span style="color:red">二进制</span>的 二进制的世界只有0和1<p>
+					<h2>如何和计算机沟通</h2>
+					<p>和计算机沟通就必须要使用到<span style="color:red">计算机语言</span>即编程语言 什么是编程语言 人
+					和人互相沟通需要语言 人和计算机理所当然也需要语言 但是计算机的语
+					言和人类的语言有着千差万别的差距</p>
+								<img class="lazy" data-original="http://i.serengeseba.com/uploads/i_0_1816463578x4496846_26.jpg">
+					<h2>计算机语言</h2>
+					<p>计算机语言就是和计算机沟通的工具</p>
+					<p>计算机语言可分为三个大类 <span style="color:red">机器语言 汇编语言 高级语言</span></p>
+					<p>机器语言 机器语言是机器能够直接识别和读取的语言由0和1组成</p>
+					<p>汇编语言 就是一个符号标记语言是取代机器语言的难记难查错难调试的
+					缺点</p>
+					<p>高级语言 高级语言就是接近人类自然语言的计算机语言可以实现高度抽
+					象常见的高级语言分别有 <span style="color:red">c语言 c++ java python ruby vb等等</span></p>
+					<h2>如何学习编程?</h2>
+					<p>哇脑壳疼 ?编程听上去真的<span style="color:red">高大上</span> 但是学习也不须要你有<span style="color:red">智力超群的高
+					级脑子</span> 也不用你有比<strong>爱因斯坦还高的智商</strong> 只要你是人就可以学习
+					</br>
+					<img class="lazy" data-original="http://i.serengeseba.com/uploads/i_1_2487385234x3293005585_26.jpg">
+					<h3>编程的学习你要抛弃社会上各种对编程的各种<span style="color:red">智障理论</span></h3>
+					<span style="color:red">例如:编程是天才才能学会的 编程是需要你很强的英语和数学能力 再比
+					如 你不适合学编程 学编程你看看自己什么模样你可以学会吗?</span>
+					我告诉你我最讨厌别人对我说这些的 我承认我脾气也不好 遇到有人对我
+					说这些理论分分钟会被我打死都有可能 瞎比比在哪里说瞎话
+					如果遇到这些人你可以 <span style="color:red">1.不理他当他傻得 2.往死里打 </span>干扰你的学习兴
+					趣</p>
+					<h2>我数学英语不好从来不及格可以学习?</h2>
+					<p>可以说明编程和英语数学没有半点关系
+					英语:里面要很多关键字只需要你记得多写多敲多思考就可以了不需要你
+					英语十级这些的</br>
+					数学:如果你初学编程也不要这么多数学知识点的 只是一点点<span style="color:red">小学数学知
+					识点</span>例如写个基础算法这些如果你要<span style="color:red">深入了解计算机内部机制就需要你高
+					等数学这些知识点了</span>但是高等数学也不难 学了高等数学有可能你一辈子
+					都用不到 因为计算机编程应用层编写压根不需要高等数学知识点</p>
+
+					<p>结论:数学不好英语不好也可以学习编程</p>
+					<h2>学习编程的方法:</h2>
+					<p>个人推荐找个导师引导你学习编程,也可以靠网上学习
+					看视频? 看书? 看文章?
+					本人推荐你看视频学习有能力有流量可以看视频学习因为视频里面讲的很
+					多是重点 看书理论太多会让初学者看不下去 文章看了自己也不可能记住
+					隔几天就忘了一大半也不知道自己在学什么</p>
+
+
+				  <!-- <img class="lazy" data-original="https://img.52z.com/upload/news/image/20200421/20200421121630_33367.jpg">  -->
+	</div>
+   <!-- 正文结束 -->
+	 <!-- ----------------底部面板------------------------ -->
+ <div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">温馨提示</h3>
+    </div>
+    <div class="panel-body">
+         <p>欢迎收藏哦</p>
+		<strong>如有问题请联系作者微信:<span style="color:red;">HA2765441358</span></strong>
+    </div>
+</div>
+<!-------------- 面板结束--------------------------- -->
+ </body>
+ <script>
+	
+ </script>
+</html>
