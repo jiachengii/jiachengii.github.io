@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>成宝博文-C语言经典算法</title>
+    <!--引入基础库-->
+    <meta name='viewport' content='width=device-width,minimum-scale=1.0 maximum-scale=1.0 user-scalable=no' /> 
+ <!-- bootstrap基础文件 -->
+<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <!-- 结束 -->
+   <!-- 图片懒加载库 -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+  <script src="js/publicjs.js"></script><!-- 公共js代码 -->
+  <link href="css/publiccss.css" rel="stylesheet"><!-- 公共css代码 -->
+  <!-- 代码高亮库 -->
+  <link href="https://cdn.bootcss.com/prism/1.15.0/themes/prism.css" rel="stylesheet">
+  <link href="https://cdn.bootcss.com/prism/1.15.0/plugins/line-numbers/prism-line-numbers.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/prism/1.15.0/prism.js"></script>
+  <script src="https://cdn.bootcss.com/prism/1.15.0/components/prism-c.js"></script>
+  <script src="https://cdn.bootcss.com/prism/1.15.0/plugins/line-numbers/prism-line-numbers.js"></script>
+  <!-- <link href="https://cdn.bootcss.com/prism/1.15.0/themes/prism-okaidia.css" rel="stylesheet"> -->
+
+  <!-- 妹子框架 -->
+   <!-- <script src="https://cdn.bootcdn.net/ajax/libs/amazeui/2.7.2/css/amazeui.min.css"></script>  -->
+  <!-- 结束 -->
+  <style>
+    	/*在超小屏幕下 手机 小于768px布局容器的宽度为100%*/
+	@media screen and (max-width: 767px){
+	    }
+	        /*.img{width:100%;}*/
+    /*小屏幕 平板电脑 大于等于768px 布局容器改为750px*/
+    	@media screen and (min-width: 768px){
+	      .lazy{height:500px;height:500px;} 
+	    }
+   /*中等屏幕 992px 布局容器改为970px*/
+       	@media screen and (min-width: 992px){
+	      .lazy{height:500px;height:500px;} 
+	    }
+       /*大屏幕 大于1200px 布局容器改为1170px*/
+	    @media screen and (min-width: 992px){
+	     .lazy{height:500px;height:500px}   .
+	  }
+  </style>
+ </head>
+ <body>
+        <!-- 顶部移动端PC端适配菜单栏 -->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid"> 
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#example-navbar-collapse">
+            <span class="sr-only">切换导航</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">成宝个人网站</a>
+    </div>
+    <div class="collapse navbar-collapse" id="example-navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">首页</a></li>
+        </ul>
+    </div>
+    </div>
+</nav>
+ <!-- 菜单结束 -->
+ <!-- 选择主题 -->
+<div class="style-btn">
+<h4>选择主题</h4>
+<button type="button" class="btn btn-default de-style" onclick="green()">护眼绿</button>
+<button type="button" class="btn btn-default dark-style" onclick="dark()">暗黑模式</button>
+</div>
+<!-- 结束 -->
+<!-- 面包屑导航 -->
+<ul class="breadcrumb">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">编程世界</a></li>
+    <li class="active">经典算法</li>
+</ul>
+<!-- 面包屑提示结束 -->
+<!-- 正文 -->
+     <div class="container">
+	              <h1>C语言经典算法1</h1>
+								</pre>
+				  <!-- <img class="lazy" data-original="https://img.52z.com/upload/news/image/20200421/20200421121630_33367.jpg">  -->
+				  <p>算法是C语言的核心 指针是C语言的灵魂算法也是整个编程里最重要的知识点</p>
+				  <!-- 必须要这样的格式不知道为什么 不这样行号显示格式会奇奇怪怪的 -->
+				  <h3>1.输入某年某月某日，判断这一天是这一年的第几天</h3>
+				    <pre class = "line-numbers"><code class="language-c">
+#include &lt stdio.h &gt
+int main()
+{
+    int day,month,year,sum,leap;
+    printf("\n请输入年、月、日，格式为：年,月,日（2015,12,10）\n");
+    scanf("%d,%d,%d",&year,&month,&day);  // 格式为：2015,12,10
+    switch(month) // 先计算某月以前月份的总天数
+    {
+        case 1:sum=0;break;
+        case 2:sum=31;break;
+        case 3:sum=59;break;
+        case 4:sum=90;break;
+        case 5:sum=120;break;
+        case 6:sum=151;break;
+        case 7:sum=181;break;
+        case 8:sum=212;break;
+        case 9:sum=243;break;
+        case 10:sum=273;break;
+        case 11:sum=304;break;
+        case 12:sum=334;break;
+        default:printf("data error");break;
+    }
+    sum=sum+day; // 再加上某天的天数
+    if(year%400==0||(year%4==0&&year%100!=0)) {// 判断是不是闰年
+        leap=1;
+    } else {
+       leap=0;
+    }
+    if(leap==1&&month>2) { // *如果是闰年且月份大于2,总天数应该加一天
+        sum++;
+    }
+    printf("这是这一年的第 %d 天。",sum);
+    printf("\n");
+}
+							</code>
+					</pre>
+<h3>2.九九乘法表</h3>
+  <pre class = "line-numbers"><code class="language-c">
+ #include &lt stdio.h &gt
+//9*9乘法口诀表
+void main()
+{
+	int i,j;
+	for(i = 1; i <= 9; i++)     //外层循环控制行
+	{ 
+		for(j = 1; j <= i; j++) //内层循环控制列
+		{
+			printf("%d*%d=%-4d",i,j,i*j);
+		}
+		printf("\n");
+	}
+  </code>
+  </pre>
+<h3>3.输出杨辉三角形</h3>
+<pre class = "line-numbers"><code class="language-c">
+//打印杨辉三角
+void YangHuiTriangle()
+{
+	int i,j,triangle[8][8];
+	
+	for(i = 0; i < 8; i++)
+		for(j = 0; j < 8; j++)
+			triangle[i][j] = 1;
+ 
+	for(i = 2; i < 8; i++)
+	{
+		for(j = 1; j < i; j++)
+		{	
+			triangle[i][j] = triangle[i-1][j]+triangle[i-1][j-1];
+		}
+	}
+	for(i = 0; i < 8; i++)
+	{
+		for(j = 0; j <= i; j++)
+			printf("%-4d",triangle[i][j]);
+		printf("\n");
+	}
+ 
+}
+</code>
+</pre>
+
+<h3>4.最大公约数和最小公倍数</h3>
+<pre class = "line-numbers"><code class="language-c">
+#include &lt stdio.h &gt
+int main()
+{	
+	int m,n,a,b;
+	printf("输入两个正整数：");
+	scanf("%d%d",&m,&n);
+	if(m>n) b=n;
+	else b=m;
+	for(int i=b;i>0;i--)
+	{
+		a=i;
+		if(m%i==0&&n%i==0) break;
+	}
+	printf("最大公约数为：%d\n",a);
+	printf("最小公倍数为：%d\n",(m*n)/a); //最小公倍数=两数的乘积/最大公约数
+ 	return 0;
+}  
+
+</code>
+</pre>
+
+<h3>5.水仙花数</h3>
+<pre class = "line-numbers"><code class="language-c">
+#include&lt stdio.h &gt
+#include&lt math.h&gt 
+main()
+{
+int a,b,c,n;
+n = 100;
+		while(n<1000)
+		{
+		a = (n % 10);
+		b = (n/10%10);
+		c = (n/100);
+		if( n == pow(a,3) +pow(b,3) + pow(c,3))
+		printf("%d\t",n);
+		n++;
+		}
+}
+</code>
+</pre>
+
+<h3>6.鸡兔同笼问题</h3>
+<pre class = "line-numbers"><code class="language-c">
+
+#include &lt stdio.h &gt
+int main(void)
+{
+	int head, foot, num1, num2;
+	printf("请输入鸡和兔的总头数和总脚数，用空格隔开:\n");
+	scanf("%d %d", &head, &foot);
+	if (foot % 2 == 1 || foot < head * 2)
+	{
+		printf("输入有误!\n");
+		return 0;
+	}
+	num1 = (foot - head * 2)/(4 - 2);
+	num2 = head - num1;
+	if ((num1 >= 0) && (num2 >= 0))
+		printf("兔子个数：%d，鸡的个数：%d\n", num1, num2);
+	else
+		printf("输入有误!\n");
+ 
+	return 0;
+}
+ 
+</code>
+</pre>
+
+<h3>7.判断某一年是否为闰年</h3>
+<pre class = "line-numbers"><code class="language-c">
+#include &lt stdio.h &gt
+int main()
+{
+    int i=2000;
+ 
+    {
+        if((i%4==0 &&i%100!=0)||i%400==0)
+     
+        printf("leap year\n",i);
+    }
+     return 0;
+}
+</code>
+</pre>
+
+<h3>8.输出奇数和偶数100以内的</h3>
+<pre class = "line-numbers"><code class="language-c">
+//输出奇数偶数
+#include &lt stdio.h &gt
+void main(){
+ for(int i=1;i<100;i++) {
+            if (i % 2 == 0) {    //如果i是偶数
+                printf("偶数%d ",i); //输出i的值
+                continue;        //则跳到下一个循环
+            }
+           printf("奇数%d ",i); //输出i的值
+}
+</code>
+</pre>
+
+
+	</div>
+
+
+   <!-- 正文结束 -->
+	 <!-- ----------------底部面板------------------------ -->
+ <div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">温馨提示</h3>
+    </div>
+    <div class="panel-body">
+         <p>欢迎收藏哦</p>
+		<strong>如有问题请联系作者微信:<span style="color:red;">HA2765441358</span></strong>
+    </div>
+</div>
+<!-------------- 面板结束--------------------------- -->
+ </body>
+ <script>
+	
+ </script>
+</html>
