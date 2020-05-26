@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>成宝博文-黑客入门第一课</title>
+    <!--引入基础库-->
+    <meta name='viewport' content='width=device-width,minimum-scale=1.0 maximum-scale=1.0 user-scalable=no' /> 
+ <!-- bootstrap基础文件 -->
+<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <!-- 结束 -->
+   <!-- 图片懒加载库 -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+  <script src="../js/publicjs.js"></script><!-- 公共js代码 -->
+  <link href="../css/publiccss.css" rel="stylesheet"><!-- 公共css代码 -->
+  <!-- 妹子框架 -->
+   <!-- <script src="https://cdn.bootcdn.net/ajax/libs/amazeui/2.7.2/css/amazeui.min.css"></script>  -->
+  <!-- 结束 -->
+  <style>
+    	/*在超小屏幕下 手机 小于768px布局容器的宽度为100%*/
+	@media screen and (max-width: 767px){
+	        /*.img{width:100%;}*/
+	    }
+    /*小屏幕 平板电脑 大于等于768px 布局容器改为750px*/
+    	@media screen and (min-width: 768px){
+	      .lazy{height:500px;height:500px;} 
+	    }
+   /*中等屏幕 992px 布局容器改为970px*/
+       	@media screen and (min-width: 992px){
+	      .lazy{height:500px;height:500px;} 
+	    }
+       /*大屏幕 大于1200px 布局容器改为1170px*/
+	    @media screen and (min-width: 992px){
+	     .lazy{height:500px;height:500px}   .
+	  }
+  </style>
+ </head>
+ <body>
+        <!-- 顶部移动端PC端适配菜单栏 -->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid"> 
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#example-navbar-collapse">
+            <span class="sr-only">切换导航</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">成宝个人网站</a>
+    </div>
+    <div class="collapse navbar-collapse" id="example-navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="../index.html">首页</a></li>
+        </ul>
+    </div>
+    </div>
+</nav>
+ <!-- 菜单结束 -->
+ <!-- 选择主题 -->
+<div class="style-btn">
+<h4>选择主题</h4>
+<button type="button" class="btn btn-default de-style" onclick="green()">护眼绿</button>
+<button type="button" class="btn btn-default dark-style" onclick="dark()">暗黑模式</button>
+</div>
+<!-- 结束 -->
+<!-- 面包屑导航 -->
+<ul class="breadcrumb">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">黑客教程</a></li>
+    <li class="active">黑客入门第一课</li>
+</ul>
+<!-- 面包屑提示结束 -->
+<!-- 正文 -->
+     <div class="container">
+	              <h1>黑客入门第一课-之Kali系统</h1>
+				<!--   <img class="lazy" data-original="https://img.52z.com/upload/news/image/20200421/20200421121630_33367.jpg">  -->
+				<h3 style="text-indent:20px">听说大家都对黑客技术感兴趣 本人就来出几期的黑客技术教程,黑客技术学习需
+				要你懂<span style="color:red">计算机的原理 操作系统的原理 计算机编程 计算机网络</span>哦 现在你不懂没
+				关系哦 慢慢学没关系 这期文章主要面对想要了解黑客技术的人难度不会很深主
+				要以工具入侵为主</h3>
+				<h2>为什么当黑客需要学习Linux?</h2>
+				<h3 style="text-indent:20px">因为Linux和黑客的风格一样学习Linux有助于你当黑客的过程中更酷,包括Linux
+				有很多针对黑客量身打造的操作系统在Linux你可以实现不需要鼠标靠键盘来完成
+				实现任何操作这个就是为什么黑客都不用鼠标的鼠标的原因,因为他在使用Linux
+				系统</h3>
+				<h2>什么是Kali Linux??</h2>
+				<h3 style="text-indent:20px">Kali是Linux的发行版之一基于debian,是一款专门用于<span style="color:red">渗透测试</span>(通俗一点来说就
+				是入侵)的一款操作系统,也是受到很多黑客青睐的Linux发行版里面包含各种各样
+				的黑客工具 可以完成整个渗透测试的所有工具Kali都内置了免去自己安装的麻烦</h3>
+				<h2>Kali可以干什么?</h2>
+				<h3 style="text-indent:20px">你把Kali玩棒了你可以实现做个无孔不入的顶级黑客,Kali可以帮助你完成黑客的
+				梦想
+				看图我们可以发现Kali里面提供了各种各样的入侵工具,俗称可以黑掉全世界的黑
+				客系统</h3>
+ <img class="lazy" data-original="img/rrs.webp">
+ <h2>更多图片</h2>
+  <img class="lazy" data-original="img/1.webp">
+  <img class="lazy" data-original="img/2.webp">
+  <img class="lazy" data-original="img/ka.webp">
+	</div>
+   <!-- 正文结束 -->
+	 <!-- ----------------底部面板------------------------ -->
+ <div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">温馨提示</h3>
+    </div>
+    <div class="panel-body">
+         <p>欢迎收藏哦</p>
+		<strong>如有问题请联系作者微信:<span style="color:red;">HA2765441358</span></strong>
+    </div>
+</div>
+<!-------------- 面板结束--------------------------- -->
+ </body>
+ <script>
+	
+ </script>
+</html>
