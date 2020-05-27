@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>成宝博文-一个命令引发的血案</title>
+    <!--引入基础库-->
+    <meta name='viewport' content='width=device-width,minimum-scale=1.0 maximum-scale=1.0 user-scalable=no' /> 
+ <!-- bootstrap基础文件 -->
+<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <!-- 结束 -->
+   <!-- 图片懒加载库 -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+  <script src="js/publicjs.js"></script><!-- 公共js代码 -->
+  <link href="css/publiccss.css" rel="stylesheet"><!-- 公共css代码 -->
+  <!-- 妹子框架 -->
+   <!-- <script src="https://cdn.bootcdn.net/ajax/libs/amazeui/2.7.2/css/amazeui.min.css"></script>  -->
+  <!-- 结束 -->
+  <style>
+    	/*在超小屏幕下 手机 小于768px布局容器的宽度为100%*/
+	@media screen and (max-width: 767px){
+	        /*.img{width:100%;}*/
+	    }
+    /*小屏幕 平板电脑 大于等于768px 布局容器改为750px*/
+    	@media screen and (min-width: 768px){
+	      .lazy{height:500px;height:500px;} 
+	    }
+   /*中等屏幕 992px 布局容器改为970px*/
+       	@media screen and (min-width: 992px){
+	      .lazy{height:500px;height:500px;} 
+	    }
+       /*大屏幕 大于1200px 布局容器改为1170px*/
+	    @media screen and (min-width: 992px){
+	     .lazy{height:500px;height:500px}   .
+	  }
+	  .imgs{height:600px;}
+  </style>
+ </head>
+ <body>
+        <!-- 顶部移动端PC端适配菜单栏 -->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid"> 
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#example-navbar-collapse">
+            <span class="sr-only">切换导航</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">成宝个人网站</a>
+    </div>
+    <div class="collapse navbar-collapse" id="example-navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">首页</a></li>
+        </ul>
+    </div>
+    </div>
+</nav>
+ <!-- 菜单结束 -->
+ <!-- 选择主题 -->
+<div class="style-btn">
+<h4>选择主题</h4>
+<button type="button" class="btn btn-default de-style" onclick="green()">护眼绿</button>
+<button type="button" class="btn btn-default dark-style" onclick="dark()">暗黑模式</button>
+</div>
+<!-- 结束 -->
+<!-- 面包屑导航 -->
+<ul class="breadcrumb">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">Linux闲谈</a></li>
+    <li class="active">命令引发的血案</li>
+</ul>
+<!-- 面包屑提示结束 -->
+<!-- 正文 -->
+     <div class="container">
+	              <h1>一个命令引发的血案</h1>
+					<h3 style="text-indent:20px">事件讲起:有一个<strong>运维小白</strong>因为服务器一点垃圾和卡顿想清理一下垃圾优化一下就上网求助
+					然后有人说<u>rm -rf /*</u>结果小白信以为真尝试在服务器里面输入<strong>rm -rf /*</strong>结果把中心主服务器的所有数据包括系统都删除了导致一大批服务器停止服务被<u style="color:green;">删除了上600多G的数据</u>导致整个公司差点倒闭这小白因为<span style="color:red;">破坏信息系统罪被判了10年</span></h3>
+					<h2>聊一聊 rm -rf /*</h2>
+					<img class="lazy" data-original="http://5b0988e595225.cdn.sohucs.com/images/20190301/0425e7ad8df74129aff0af06edf9a92e.gif">
+					<h3 style="text-indent:20px">rm是Linux系统的<span style="color:red;">删除</span>命令 -rf意思是<strong>不需要确认把以下的目录所有文件删除</strong> 如果加了 /*没有任何目录名称呵呵就会<u>把整个系统和数据全部删除</u> 如果做Linux服务器维护记得删除文件的时候要注意不然整个公司就被你搞没了如果做<strong>Windows服务器维护</strong>就没有这么有杀伤力的<u>命令</u> 真的因为一个<strong>错误导致自己十年青春在监狱里面过</strong>真的不好如果你在生产环境里面运行<u>rm -rf /*</u>并且你使用的是root权限意味着</h3>
+				  <img class="lazy" data-original="https://pics0.baidu.com/feed/a8773912b31bb051a7e5c084cc13b1b048ede0c3.jpeg?token=2c38e485295273039e6cefe3e536b396&s=2B008B4FCC3427860338D4A80300E093"> 
+					<h3 style="text-indent:20px">因为linux系统<u><strong>开源免费</strong></u> 所以有很多公司 包括<u>大型互联网公司</u>的服务器都是Linux系统的服务器举个例子
+					如果你的快手号有<u style="color:pink">100万粉丝</u> 如果维护<strong>储存粉丝人数的服务器</strong>运维人员删库了你的粉丝就会一夜掉0个你的好朋友都不见了</h3>
+				  <img class="lazy imgs" data-original="http://5b0988e595225.cdn.sohucs.com/images/20180922/2189f91916314afaac46eba6e61e3556.jpeg" > 
+				  <img class="lazy" data-original="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1590501748614&di=0596e630b3057fa114b91ed1f65f0da5&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farchive%2Fa78aa78b5f2d59e0c4e1ea9e3baef046c0fa3b45.jpg">
+				  <img class="lazy" data-original="http://5b0988e595225.cdn.sohucs.com/images/20180922/b12866a087d24d429e3eff045d052351.jpeg"> 
+				  <div class="panel panel-danger">
+						<div class="panel-heading">
+							<h3 class="panel-title">关于命令</h3>
+						</div>
+						<div class="panel-body">
+							操作需谨慎数据无价操作失误毁一生
+						</div>
+					</div>
+	</div>
+   <!-- 正文结束 -->
+	 <!-- ----------------底部面板------------------------ -->
+ <div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">温馨提示</h3>
+    </div>
+    <div class="panel-body">
+         <p>欢迎收藏哦</p>
+		<strong>如有问题请联系作者微信:<span style="color:red;">HA2765441358</span></strong>
+    </div>
+</div>
+<!-------------- 面板结束--------------------------- -->
+ </body>
+ <script>
+	
+ </script>
+</html>
