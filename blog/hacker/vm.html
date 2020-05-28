@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>成宝博文-虚拟机详解</title>
+    <!--引入基础库-->
+    <meta name='viewport' content='width=device-width,minimum-scale=1.0 maximum-scale=1.0 user-scalable=no' /> 
+ <!-- bootstrap基础文件 -->
+<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <!-- 结束 -->
+   <!-- 图片懒加载库 -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+  <script src="../js/publicjs.js"></script><!-- 公共js代码 -->
+  <link href="../css/publiccss.css" rel="stylesheet"><!-- 公共css代码 -->
+  <!-- 妹子框架 -->
+   <!-- <script src="https://cdn.bootcdn.net/ajax/libs/amazeui/2.7.2/css/amazeui.min.css"></script>  -->
+  <!-- 结束 -->
+  <style>
+h1{margin:0;}
+    	/*在超小屏幕下 手机 小于768px布局容器的宽度为100%*/
+	@media screen and (max-width: 767px){
+	        /*.img{width:100%;}*/
+	    }
+    /*小屏幕 平板电脑 大于等于768px 布局容器改为750px*/
+    	@media screen and (min-width: 768px){
+	      .lazy{height:500px;height:500px;} 
+	    }
+   /*中等屏幕 992px 布局容器改为970px*/
+       	@media screen and (min-width: 992px){
+	      .lazy{height:500px;height:500px;} 
+	    }
+       /*大屏幕 大于1200px 布局容器改为1170px*/
+	    @media screen and (min-width: 992px){
+	     .lazy{height:500px;height:500px}   .
+	  }
+.content-t{
+background-color: rgb(239, 112, 96);
+font-size: 16px;
+border-radius: 80% 100% 90% 20%;
+color: rgb(255, 255, 255);
+line-height: 20px; 
+margin-right: 8px; 
+padding: 4px 10px;
+}
+/*小标题*/
+.small-title {
+    margin-top: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 28px;
+    color: rgb(239, 112, 96);
+    min-height: 32px;
+    border-bottom: 2px solid rgb(239, 112, 96);
+    border-top-color: rgb(239, 112, 96);
+    border-right-color: rgb(239, 112, 96);
+    border-left-color: rgb(239, 112, 96);
+    text-align: justify;
+}
+ .text {
+font-size: 19px;
+text-indent: 20px;
+}
+  </style>
+ </head>
+ <body>
+        <!-- 顶部移动端PC端适配菜单栏 -->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid"> 
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#example-navbar-collapse">
+            <span class="sr-only">切换导航</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">成宝个人网站</a>
+    </div>
+    <div class="collapse navbar-collapse" id="example-navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="../index.html">首页</a></li>
+        </ul>
+    </div>
+    </div>
+</nav>
+ <!-- 菜单结束 -->
+ <!-- 选择主题 -->
+<div class="style-btn">
+<h4>选择主题</h4>
+<button type="button" class="btn btn-default de-style" onclick="green()">护眼绿</button>
+<button type="button" class="btn btn-default dark-style" onclick="dark()">暗黑模式</button>
+</div>
+<!-- 结束 -->
+<!-- 面包屑导航 -->
+<ul class="breadcrumb">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">虚拟机软件</a></li>
+    <li class="active">虚拟机介绍</li>
+</ul>
+<!-- 面包屑提示结束 -->
+<!-- 正文 -->
+     <div class="container">
+	              <h1>虚拟机的详解</h1>
+			  <!-- 小标题 -->
+			<p class="small-title">
+				<span class="content-t">
+				1</span>
+				<strong>什么是虚拟机?</strong>
+			</p>
+<p class='text'>虚拟机看名字就知道是虚拟出来的机器(可以比喻成一台完整的电脑)其实虚拟机就是一个软件,它可以通过技术在软件里面模拟出另外一台计算机(在物理机的基础上)这个<strong>虚拟机具备完整的硬件系统但是这些硬件系统都是软件模拟出来的</strong>例如虚拟机里面的<u>虚拟硬盘</u>(就是在物理硬盘的基础上取出一部分存储空间模拟出一块虚拟硬盘供虚拟机使用)</p>
+	  <!-- 小标题 -->
+			<p class="small-title">
+				<span class="content-t">
+				2</span>
+				<strong>为什么要使用虚拟机?</strong>
+			</p>
+<p class="text">
+虚拟机唯一的优点它就是一个软件<strong>安装方便</strong>,安装一个操作系统和安装软件一样<strong>容易</strong>,可以安装多个操作系统(只要你电脑的硬盘存储空间够)多个操作系统同时运行(只要你电脑运行内存够)如果玩坏了可以删掉也不会有很大的问题删除了虚拟机也不会导致物理机的操作系统出问题(虚拟机和物理机的环境是有隔离的不会互相造成影响),虚拟机安装的操作系统很方便移植,可以把虚拟机系统所需的文件放在U盘<strong>随身携带</strong>,虚拟机也可以<strong>随时修改虚拟的硬件配置例如CPU核心数,运行内存空间大小,硬盘空间大小 方便模拟出各种配置环境</strong>
+</p>
+	  <!-- 小标题 -->
+			<p class="small-title">
+				<span class="content-t">
+				3</span>
+				<strong>虚拟机的优势</strong>
+			</p>
+<p class="text">
+	虚拟机就是一款软件你可以在里面安装各种<strong>操作系统</strong>来玩,也<strong>可以把病毒放到虚拟机里玩</strong> 就算是破坏性比较强的病毒在虚拟机里面也会显出各种真面目,在虚拟机里面运行<strong>计算机病毒</strong>,病毒发作只会影响虚拟机的操作系统不会影响到真实在物理机上面的操作系统所以呢虚拟机在<strong>病毒测试 软件测试 逆向分析 软件破解 病毒分析</strong>这些用的比较多,虚拟机也可以用来体验各种各样的操作系统,学习各种各样的操作系统安装和操作,如果别人给了你一个<strong>电脑软件</strong>,你怕是病毒不敢在你真机里运行也想瞧瞧里面有什么是不是病毒就可以把这个软件放到虚拟机里面运行看看有什么异常就可以确定是不是病毒 尽情调戏计算机病毒吧(玩病毒也要小心有的病毒会利用虚拟机的漏洞来<strong>穿透虚拟机</strong>来攻击感染到物理机,不过这些病毒现在很少也要多一个心眼)
+</p>
+	  <!-- 小标题 -->
+			<p class="small-title">
+				<span class="content-t">
+				4</span>
+				<strong>常见的虚拟机软件有哪些?</strong>
+			</p>
+<p class="text">
+	两款比较常用分别是<strong>VMware</strong>和<strong>VirtualBox</strong>(也叫vbox),<strong>Hyper-V</strong>也有不常用的例如Virtual PC,但是VMware是商业软件是收费的,但是需要注册码也可以从网上找到各种各样可以顺利激活VMware软件的注册码,vbox是免费的开源软件,Hyper-v是微软Windows 10内置的虚拟机
+</p>
+<h4>VMware</h4>
+<img class="lazy" data-original="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1590716463419&di=68b5dfa515e4be27de5b3fd9f6558f85&imgtype=0&src=http%3A%2F%2Fimg.iplaysoft.com%2Fwp-content%2Fuploads%2F2015%2Fvmware-workstation-pro%2Fvmware_workstation_pro_screenshot.jpg">
+<h4>VirtualBox</h4>
+<img class="lazy" data-original="http://a.hiphotos.baidu.com/exp/w=500/sign=84b75c52a4cc7cd9fa2d34d909002104/8cb1cb1349540923f54c24c19558d109b3de4963.jpg">
+<h4>Hyper-V</h4>
+<img class="lazy" data-original="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1417020609,3274289432&fm=26&gp=0.jpg">
+							  <!-- <img class="lazy" data-original="https://img.52z.com/upload/news/image/20200421/20200421121630_33367.jpg">  -->
+	</div>
+   <!-- 正文结束 -->
+	 <!-- ----------------底部面板------------------------ -->
+ <div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">温馨提示</h3>
+    </div>
+    <div class="panel-body">
+         <p>欢迎收藏哦</p>
+		<strong>如有问题请联系作者微信:<span style="color:red;">HA2765441358</span></strong>
+    </div>
+</div>
+<!-------------- 面板结束--------------------------- -->
+ </body>
+ <script>
+	
+ </script>
+</html>
