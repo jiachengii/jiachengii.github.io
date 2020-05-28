@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>成宝博文-弱口令爆破之hydra</title>
+    <!--引入基础库-->
+    <meta name='viewport' content='width=device-width,minimum-scale=1.0 maximum-scale=1.0 user-scalable=no' /> 
+ <!-- bootstrap基础文件 -->
+<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <!-- 结束 -->
+   <!-- 图片懒加载库 -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+  <script src="../js/publicjs.js"></script><!-- 公共js代码 -->
+  <link href="../css/publiccss.css" rel="stylesheet"><!-- 公共css代码 -->
+  <!-- 妹子框架 -->
+   <!-- <script src="https://cdn.bootcdn.net/ajax/libs/amazeui/2.7.2/css/amazeui.min.css"></script>  -->
+  <!-- 结束 -->
+  <style>
+    	/*在超小屏幕下 手机 小于768px布局容器的宽度为100%*/
+	@media screen and (max-width: 767px){
+	        /*.img{width:100%;}*/
+	    }
+    /*小屏幕 平板电脑 大于等于768px 布局容器改为750px*/
+    	@media screen and (min-width: 768px){
+	      .lazy{height:500px;height:500px;} 
+	    }
+   /*中等屏幕 992px 布局容器改为970px*/
+       	@media screen and (min-width: 992px){
+	      .lazy{height:500px;height:500px;} 
+	    }
+       /*大屏幕 大于1200px 布局容器改为1170px*/
+	    @media screen and (min-width: 992px){
+	     .lazy{height:500px;height:500px}   .
+	  }
+	   .ps{
+			width:89vw;
+			/* height:8vh;*/
+			color:rgb(176, 109, 51);
+			padding:19px;
+			margin-bottom:19px;
+			background-color:#cccccc;
+			 border-left: 5px solid #ffcc99;/*主要属性*/
+			}
+  </style>
+ </head>
+ <body>
+        <!-- 顶部移动端PC端适配菜单栏 -->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid"> 
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#example-navbar-collapse">
+            <span class="sr-only">切换导航</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">成宝个人网站</a>
+    </div>
+    <div class="collapse navbar-collapse" id="example-navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="../index.html">首页</a></li>
+        </ul>
+    </div>
+    </div>
+</nav>
+ <!-- 菜单结束 -->
+ <!-- 选择主题 -->
+<div class="style-btn">
+<h4>选择主题</h4>
+<button type="button" class="btn btn-default de-style" onclick="green()">护眼绿</button>
+<button type="button" class="btn btn-default dark-style" onclick="dark()">暗黑模式</button>
+</div>
+<!-- 结束 -->
+<!-- 面包屑导航 -->
+<ul class="breadcrumb">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">黑客教程</a></li>
+    <li class="active">弱口令爆破</li>
+</ul>
+<!-- 面包屑提示结束 -->
+<!-- 正文 -->
+     <div class="container">
+	              <h1>弱口令爆破之hydra</h1>
+				  <h3>要学习弱口令爆破就必须要了解什么是弱口令</h3>
+				  <div class="panel panel-success">
+						<div class="panel-heading">
+							<h3 class="panel-title">什么是弱口令</h3>
+						</div>
+						<div class="panel-body">
+						<h3 style="text-indent:20px">弱口令就是一些简单的<span style="color:red">纯数字</span>或者<span style="color:red">纯数字和简单的字母密码组合</span>例如1234 123456 8888888 123456a这些很容易被人猜中或者
+						密码爆破工具爆破出来的弱密码
+						</h3>
+	                </div>
+         </div>
+							 <!-- 带左侧边框的 -->
+							  <div class="ps">
+							  <p>工具准备:弱口令爆破工具(Kali内置的工具)</p>
+							  <p><span style="color:red">Hydra</span>也叫九头蛇</p>
+							  <p>密码字典</p>
+							  </div>
+						</div>
+            <h3>Hydra使用方法:</h3>
+			<h3>hydra -l 用户名 -P 用户密码字典 IP地址 要破解的协议 ;例如:</h3>
+			<h3>hydra -l administrator -P pass.txt 10.36.16.18 smb</h3>
+			<h3>Hydra支持多种的协议破解常用的分别是 smb rdp mysql pop3</h3>
+			<h4  style="text-indent:20px"><h5>官网介绍:</h5>
+			<strong>hydra是著名黑客组织thc的一款开源的暴力密码破解工具，可以在线破解多种密码。官 网：http://www.thc.org/thc-hydra，可支持<span style="color:red;">AFP, Cisco AAA, Cisco auth, Cisco enable, CVS, Firebird, FTP, HTTP-FORM-GET, HTTP-FORM-POST, HTTP-GET, HTTP-HEAD, HTTP-PROXY, HTTPS-FORM-GET, HTTPS-FORM-POST, HTTPS-GET, HTTPS-HEAD, HTTP-Proxy, ICQ, IMAP, IRC, LDAP, MS-SQL, MYSQL , NCP, NNTP, Oracle Listener , Oracle SID, Oracle, PC-Anywhere, PCNFS, POP3, POSTGRES, RDP, Rexec, Rlogin, Rsh, SAP/R3, SIP, SMB, SMTP, SMTP Enum, SNMP, SOCKS5, SSH (v1 and v2), Subversion, Teamspeak (TS2), Telnet, VMware-Auth, VNC and XMPP</span>等类型密码。</strong>
+			</h4>
+			<h3>开始实验:以smb密码为例其他的自己举一反三</h3>
+			<h4>输入命令</h4>
+	<img class="lazy" data-original="img/bp.webp">
+	<a class = "look" href="img/bp.webp">查看高清大图</a>
+	<h3>已爆破出密码了</h3>
+			<img class="lazy" data-original="img/succ.webp">
+	<a class = "look" href="img/succ.webp">查看高清大图</a>
+	<h3>爆破完成献上常用弱口令</h3>
+				  <!-- <img class="lazy" data-original="https://img.52z.com/upload/news/image/20200421/20200421121630_33367.jpg">  -->
+ <table class="table table-striped">
+  <caption>常用弱口令</caption>
+  <thead>
+    <tr>
+      <th>12</th>
+      <th>123</th>
+      <th>1234</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>12345</td>
+      <td>123456</td>
+      <td>1234567</td>
+    </tr>
+    <tr>
+      <td>12345678</td>
+      <td>123456789</td>
+      <td>400003</td>
+    </tr>
+    <tr>
+      <td>654321</td>
+      <td>0123456</td>
+      <td>0123456789</td>
+    </tr>
+    <tr>
+      <td>01234567</td>
+      <td>012345678</td>
+      <td>012345</td>
+    </tr>
+    <tr>
+      <td>88888888</td>
+      <td>666666</td>
+      <td>5201314</td>
+    </tr>
+    <tr>
+      <td>1234qwer</td>
+      <td>iloveyou</td>
+      <td>5201314a</td>
+    </tr>
+    <tr>
+      <td>pass</td>
+      <td>password</td>
+      <td>admin</td>
+    </tr>
+    <tr>
+      <td>root</td>
+      <td>toor</td>
+      <td>woaini520</td>
+    </tr>
+    <tr>
+      <td>9999</td>
+      <td>woaini521</td>
+      <td>233333</td>
+    </tr>
+   <tr>
+      <td>000000</td>
+      <td>oracle</td>
+      <td>0000</td>
+    </tr>
+
+  </tbody>
+</table>
+	</div>
+   <!-- 正文结束 -->
+	 <!-- ----------------底部面板------------------------ -->
+ <div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">温馨提示</h3>
+    </div>
+    <div class="panel-body">
+         <p>欢迎收藏哦</p>
+		<strong>如有问题请联系作者微信:<span style="color:red;">HA2765441358</span></strong>
+    </div>
+</div>
+<!-------------- 面板结束--------------------------- -->
+ </body>
+ <script>
+	
+ </script>
+</html>
