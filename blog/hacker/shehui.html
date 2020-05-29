@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>成宝博文-黑客秘术-社会工程学</title>
+    <!--引入基础库-->
+    <meta name='viewport' content='width=device-width,minimum-scale=1.0 maximum-scale=1.0 user-scalable=no' /> 
+ <!-- bootstrap基础文件 -->
+<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <!-- 结束 -->
+   <!-- 图片懒加载库 -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+  <script src="../js/publicjs.js"></script><!-- 公共js代码 -->
+  <link href="../css/publiccss.css" rel="stylesheet"><!-- 公共css代码 -->
+  <!-- 妹子框架 -->
+   <!-- <script src="https://cdn.bootcdn.net/ajax/libs/amazeui/2.7.2/css/amazeui.min.css"></script>  -->
+  <!-- 结束 -->
+  <style>
+    	/*在超小屏幕下 手机 小于768px布局容器的宽度为100%*/
+	@media screen and (max-width: 767px){
+	        /*.img{width:100%;}*/
+	    }
+    /*小屏幕 平板电脑 大于等于768px 布局容器改为750px*/
+    	@media screen and (min-width: 768px){
+	      .lazy{height:500px;height:500px;} 
+	    }
+   /*中等屏幕 992px 布局容器改为970px*/
+       	@media screen and (min-width: 992px){
+	      .lazy{height:500px;height:500px;} 
+	    }
+       /*大屏幕 大于1200px 布局容器改为1170px*/
+	    @media screen and (min-width: 992px){
+	     .lazy{height:500px;height:500px}   .
+	  }
+/*小标题*/
+.small-title{
+    margin-top: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 28px;
+    color: rgb(239, 112, 96);
+    min-height: 32px;
+    border-bottom: 2px solid rgb(239, 112, 96);
+    border-top-color: rgb(239, 112, 96);
+    border-right-color: rgb(239, 112, 96);
+    border-left-color: rgb(239, 112, 96);
+    text-align: justify;
+}
+  p {
+font-size: 19px;
+font-family: '微软雅黑';
+line-height:27px;
+}
+  </style>
+ </head>
+ <body>
+        <!-- 顶部移动端PC端适配菜单栏 -->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid"> 
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#example-navbar-collapse">
+            <span class="sr-only">切换导航</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">成宝个人网站</a>
+    </div>
+    <div class="collapse navbar-collapse" id="example-navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="../index.html">首页</a></li>
+        </ul>
+    </div>
+    </div>
+</nav>
+ <!-- 菜单结束 -->
+ <!-- 选择主题 -->
+<div class="style-btn">
+<h4>选择主题</h4>
+<button type="button" class="btn btn-default de-style" onclick="green()">护眼绿</button>
+<button type="button" class="btn btn-default dark-style" onclick="dark()">暗黑模式</button>
+</div>
+<!-- 结束 -->
+<!-- 面包屑导航 -->
+<ul class="breadcrumb">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">黑客技术</a></li>
+    <li class="active">社会工程学</li>
+</ul>
+<!-- 面包屑提示结束 -->
+<!-- 正文 -->
+     <div class="container">
+	              <h1>带你认识黑客的秘术之社会工程学</h1>
+					  <!-- 小标题 -->
+					<p class="small-title">
+						<span style="background-color: rgb(239, 112, 96);font-size: 16px;border-radius: 80% 100% 90% 20%;color: rgb(255, 255, 255);
+						 line-height: 20px; margin-right: 8px; padding: 4px 10px;">
+						1</span>
+						<strong>什么是社会工程学?</strong>
+					</p>
+<p>社会工程学是黑客米特尼克悔改后在《欺骗的艺术》中所提出的，是一种通过对受害者心理弱点、本能反应、好奇心、信任、贪婪等心理陷阱进行诸如欺骗、伤害等危害手段。社会工程学也是在黑客里面的一种非技术性获取信息的手段</p>
+<p>那么，什么算是社会工程学呢？</p>
+<p>在信息安全这个链条中，人的因素是最薄弱的一环节。社会工程就是利用人的薄弱点，通过欺骗手段而入侵计算机系统的一种攻击方法。组织可能采取了很周全的技术安全控制措施，例如：身份鉴别系统、防火墙、入侵检测、加密系统等，但由于员工无意当中通过电话或电子邮件泄露机密信息(如系统口令、IP地址)，或被非法人员欺骗而泄露了组织的机密信息，就可能对组织的信息安全造成严重损害。</p>
+<p>社会工程学通常以交谈、欺骗、假冒或口语等方式，从合法用户中套取用户系统的秘密。熟练的社会工程师都是擅长进行信息收集的身体力行者。很多表面上看起来一点用都没有的信息都会被这些人利用起来进行渗透。比如说一个电话号码，一个人的名字，或者工作的ID号码，都可能会被社会工程师所利用。</p>
+<p>这意味着没有把“人”这个因素放进企业安全管理策略中去的话将会构成一个很大的安全“裂缝”。</p>
+	<!-- 			  <img class="lazy" data-original="https://img.52z.com/upload/news/image/20200421/20200421121630_33367.jpg">  -->
+	</div>
+   <!-- 正文结束 -->
+	 <!-- ----------------底部面板------------------------ -->
+ <div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">温馨提示</h3>
+    </div>
+    <div class="panel-body">
+         <p>欢迎收藏哦</p>
+		<strong>如有问题请联系作者微信:<span style="color:red;">HA2765441358</span></strong>
+    </div>
+</div>
+<!-------------- 面板结束--------------------------- -->
+ </body>
+ <script>
+	
+ </script>
+</html>
