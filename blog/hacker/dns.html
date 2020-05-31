@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>成宝博文-dns劫持</title>
+    <!--引入基础库-->
+    <meta name='viewport' content='width=device-width,minimum-scale=1.0 maximum-scale=1.0 user-scalable=no' /> 
+ <!-- bootstrap基础文件 -->
+<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <!-- 结束 -->
+   <!-- 图片懒加载库 -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+  <script src="../js/publicjs.js"></script><!-- 公共js代码 -->
+  <link href="../css/publiccss.css" rel="stylesheet"><!-- 公共css代码 -->
+  <!-- 妹子框架 -->
+   <!-- <script src="https://cdn.bootcdn.net/ajax/libs/amazeui/2.7.2/css/amazeui.min.css"></script>  -->
+  <!-- 结束 -->
+  <style>
+    	/*在超小屏幕下 手机 小于768px布局容器的宽度为100%*/
+	@media screen and (max-width: 767px){
+	        /*.img{width:100%;}*/
+	    }
+    /*小屏幕 平板电脑 大于等于768px 布局容器改为750px*/
+    	@media screen and (min-width: 768px){
+	      .lazy{height:500px;height:500px;} 
+	    }
+   /*中等屏幕 992px 布局容器改为970px*/
+       	@media screen and (min-width: 992px){
+	      .lazy{height:500px;height:500px;} 
+	    }
+       /*大屏幕 大于1200px 布局容器改为1170px*/
+	    @media screen and (min-width: 992px){
+	     .lazy{height:500px;height:500px}   .
+	  }
+  </style>
+ </head>
+ <body>
+        <!-- 顶部移动端PC端适配菜单栏 -->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid"> 
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#example-navbar-collapse">
+            <span class="sr-only">切换导航</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">成宝个人网站</a>
+    </div>
+    <div class="collapse navbar-collapse" id="example-navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="../index.html">首页</a></li>
+        </ul>
+    </div>
+    </div>
+</nav>
+ <!-- 菜单结束 -->
+ <!-- 选择主题 -->
+<div class="style-btn">
+<h4>选择主题</h4>
+<button type="button" class="btn btn-default de-style" onclick="green()">护眼绿</button>
+<button type="button" class="btn btn-default dark-style" onclick="dark()">暗黑模式</button>
+</div>
+<!-- 结束 -->
+<!-- 面包屑导航 -->
+<ul class="breadcrumb">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">黑客教程DNS教程</a></li>
+    <li class="active">dns教程</li>
+</ul>
+<!-- 面包屑提示结束 -->
+<!-- 正文 -->
+     <div class="container">
+					<h2>DNS劫持</h2>
+				  <div class="panel panel-success">
+						<div class="panel-heading">
+							<h3 class="panel-title">DNS</h3>
+						</div>
+						<div class="panel-body">
+						dns就是域名系统用来解析域名的,DNS可以把对应的域名转换成IP地址,这样计算机和计算机才能互相通讯,
+						dns表里面有各种IP地址和域名的映射表,每个域名和IP地址都是一对一或者多对一关系,域名计算机是不认识的
+						计算机只认IP地址IP地址,让人也不方便记忆,所以呢域名就出来了,然而计算机也不认识域名,所以呢域名解析DNS就出来了,
+						dns把对应的域名转换成IP地址,就不用人来记忆这些没有意义的IP地址了
+						</h3>
+	                </div>
+         </div>
+				  <div class="panel panel-success">
+						<div class="panel-heading">
+							<h3 class="panel-title">dns劫持</h3>
+						</div>
+						<div class="panel-body">
+					 dns就是伪造域名解析服务器（DNS）的方法，把目标网站域名解析到错误的IP地址从而实现用户无法访问目标网站的目的或者蓄意或恶意要求用户访问指定IP地址（网站）的目的
+						</h3>
+	                </div>
+         </div>
+				  <div class="panel panel-success">
+						<div class="panel-heading">
+							<h3 class="panel-title">准备工具</h3>
+						</div>
+						<div class="panel-body">
+						<h4>靶机:192.168.42.141</h4></br>
+						<h4>攻击机器 kali:192.168.42.248</h4></br>
+						<h4>冒充域名服务器:192.168.0.120</h4>
+	                    <h4>黑客工具:ettercap(kali内置)</h4>
+		                <h4>准备一个冒充的服务器</h4>
+	                </div>
+	        <h3>查询靶机IP地址Windows系统输入ipconfig</h3>
+			<img class="lazy" data-original="img/window.webp">
+	        <a class = "look" href="img/window.webp">查看高清大图</a>
+         </div>
+	        <h3>查询靶机IP地址Linux Kali系统输入ifconfig</h3>
+			<img class="lazy" data-original="img/dnskali.webp">
+	        <a class = "look" href="img/dnskali.webp">查看高清大图</a>
+         </div>
+	        <h3>ping 一下4399 IP是120.232.176.61(没有攻击前)</h3>
+			<img class="lazy" data-original="img/43991.webp">
+	        <a class = "look" href="img/43991.webp">查看高清大图</a>
+         </div>
+	        <h3>浏览4399网站(没有攻击前)</h3>
+			<img class="lazy" data-original="img/4399.webp">
+	        <a class = "look" href="img/4399.webp">查看高清大图</a>
+         </div>
+		 <h2>开始攻击</h4>
+		<h3>编辑ettercap的配置文件</h3>
+		<h3>在命令行输入vim /etc/ettercap/etter.dns</h3>
+	    <h3>进入后敲键盘i键进行开启写入,然后添加一条记录*    A  你伪造黑页服务器的IP地址</h3>
+		<h3>完成就按下ESC键 然后输入:wq保存并退出</h3>
+	    	<img class="lazy" data-original="img/kl.webp">
+	        <a class = "look" href="img/kl.webp">查看高清大图</a>
+      <h3>1.打开ettercap的图形化界面</h3>
+      <h3>2.菜单栏 sniff -> Unified sniffing..</h3>
+		    <img class="lazy" data-original="img/dnsbb.webp">
+	        <a class = "look" href="img/dnsbb.webp">查看高清大图</a>
+	 <h3>3.然后选择网卡:一般你没有安装其他网卡无线网卡都是选择eth0</h3>
+		    <img class="lazy" data-original="img/xz.webp">
+	        <a class = "look" href="img/xz.webp">查看高清大图</a>
+	 <h3>4.点击 菜单栏 - Hosts -> Scan for hosts 扫描主机</h3>
+	 <h3>5.扫描完成 菜单栏 - Hosts -> Hosts list 显示主机列表</h3>
+	 <h3>6.选择你要攻击的主机然后右键添加目标1 Add to Target1</h3>
+	 <h3>7.使用插件 菜单栏 - Plugins -> Manage to plugins</h3>
+     <h4>激活插件  选择name为dns_spoof的插件双击一下创建旁边显示一个*就说明了激活成功</h3>
+	<h3>8.ARP投毒 选择你要攻击的主机 菜单栏 Mitm -> ARP poisoning....</h3>
+	<h3>对话框选择记得要选择Sniff remote connections 然后点击确定</h3>
+		    <img class="lazy" data-original="img/tc.webp">
+	        <a class = "look" href="img/tc.webp">查看高清大图</a>
+     <h3>DNS劫持完成</h3>
+	<h3>到靶机里面测试一下</h3>
+    <h3>可以发现DNS已经指向了我伪造的网址192.168.42.120</h3>
+		    <img class="lazy" data-original="img/done.webp">
+	        <a class = "look" href="img/done.webp">查看高清大图</a>
+   <h3>到浏览器打开4399官网看看 发现已经把4399页面给劫持了</h3>
+		    <img class="lazy" data-original="img/done2.webp">
+	        <a class = "look" href="img/done2.webp">查看高清大图</a>
+<h3>注意:https协议的网站暂时不能进行劫持<h4>
+				<!--   <img class="lazy" data-original="https://img.52z.com/upload/news/image/20200421/20200421121630_33367.jpg">  -->
+	</div>
+   <!-- 正文结束 -->
+	 <!-- ----------------底部面板------------------------ -->
+ <div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">温馨提示</h3>
+    </div>
+    <div class="panel-body">
+         <p>欢迎收藏哦</p>
+		<strong>如有问题请联系作者微信:<span style="color:red;">HA2765441358</span></strong>
+    </div>
+</div>
+<!-------------- 面板结束--------------------------- -->
+ </body>
+ <script>
+	
+ </script>
+</html>
